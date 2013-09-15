@@ -1,0 +1,19 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /
+
+#RewriteRule ^comic-([^/]+)\.htm$ comic.php?id=$1
+
+#RewriteRule ^login.php$ index.php
+#RewriteRule ^okayfishadmin.php$ index.php
+#RewriteRule ^okayfishBAR.php$ index.php
+
+<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond %{REMOTE_ADDR} !^2\.103\.30\.31
+#RewriteCond %{REQUEST_URI} !/main$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* main/welcome [R=302,L]
+#RewriteRule    ^$ app/webroot/    [L]
+#RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>

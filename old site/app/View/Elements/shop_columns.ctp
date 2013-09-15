@@ -1,0 +1,1 @@
+<div id="inner_container">		<div id="secondary_column">			<?php echo $this->element('categories'); ?>		</div>		<div id="primary_column">			<?php echo $content_for_layout; ?>		</div></div>
