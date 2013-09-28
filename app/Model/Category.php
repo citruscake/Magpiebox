@@ -1,0 +1,1 @@
+<?phpclass Category extends AppModel {	var $primaryKey = 'category_id';	/*public function getCategories() {		//if(isset($this->params['requested'])) {				$categories = $this->find('all', array('order' => array('Category.category_id DESC')));			return $categories;		//}	}*/}?>

@@ -1,0 +1,13 @@
+[28-Aug-2013 10:43:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 65552 bytes) in /home/mbox/public_html/magento/app/code/core/Mage/Catalog/Helper/Product/Url.php on line 129
+[28-Aug-2013 10:48:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 240 bytes) in /home/mbox/public_html/magento/app/code/core/Mage/Directory/Model/Currency.php on line 308
+[28-Aug-2013 10:53:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 65552 bytes) in /home/mbox/public_html/magento/app/code/core/Mage/Catalog/Helper/Product/Url.php on line 129
+[28-Aug-2013 10:57:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3072 bytes) in /home/mbox/public_html/magento/app/code/core/Mage/CatalogInventory/Model/Resource/Indexer/Stock/Default.php on line 274
+[17-Sep-2013 16:05:04 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[18-Sep-2013 11:51:03 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[18-Sep-2013 22:33:48 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[18-Sep-2013 22:59:41 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[25-Sep-2013 15:45:33 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[26-Sep-2013 13:44:07 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[26-Sep-2013 14:53:42 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[26-Sep-2013 15:30:18 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546
+[26-Sep-2013 15:39:02 UTC] PHP Fatal error:  Class 'Mage_Tillsync_Helper_Data' not found in /home/mbox/public_html/magento/app/Mage.php on line 546

@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+	RewriteBase /
+    RewriteRule ^$ app/webroot/ [L]
+    RewriteRule (.*) app/webroot/$1 [L]
+</IfModule>
+
+#DIFFERENT FROM DEFAULT: you must add RewriteBase / to all of the htaccess. Also, in the app/webroot one, RewriteRule ^(.*)$ index.php?/$1 [QSA,L]

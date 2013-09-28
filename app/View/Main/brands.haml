@@ -1,0 +1,15 @@
+#brands_container
+	.row-fluid
+		.span10
+			%header
+				%h1
+					Brands we stock
+	.row-fluid
+		%content{:class => "span10",
+			:id => "brands_gallery"}
+			:plain
+				<?php
+					foreach($brands as $brand) {
+						echo $this->element("brand_frame", array("brand" => $brand));
+					}
+				?>

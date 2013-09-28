@@ -1,0 +1,25 @@
+{
+	"brands" : [
+		
+		{
+			"title" : "Suck Uk",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "pencil_sharpener2"
+		},
+		{
+			"title" : "Fikay Eco",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "fikayeco"
+		},
+		{
+			"title" : "Ancient Wisdom",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "freedom"
+		},
+		{
+			"title" : "Ottoman Scent",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "fruit"
+		}
+	]
+}

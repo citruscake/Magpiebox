@@ -1,0 +1,22 @@
+.brand-frame
+	%article
+		.row-fluid
+			%header
+				%h1
+					:plain
+						<?php
+							echo $brand['title'];
+						?>
+		.row-fluid
+			:plain
+				<?php
+					echo $this->Html->image('/img/brands/'.$brand['image_file_name'].'.jpg', array('alt' => 'CakePHP'));
+				?>
+		.row-fluid
+			%content
+				%p
+					:plain
+						<?php
+							echo $brand['description'];
+						?>
+	

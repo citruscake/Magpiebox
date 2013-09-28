@@ -1,0 +1,26 @@
+#blog_container
+	.row-fluid
+		.span10
+			%header
+				%h1
+					Our blog
+	.row-fluid
+		.span8
+			:plain
+				<?php
+					foreach($posts as $post) {
+		
+						echo $this->element('blog_post', array('post' => $post));
+		
+					}
+				?>
+		.span2
+			%header
+				%h1
+					Recent entries:
+			%nav
+				%ul{:class => "list-group"}
+					%li{:class => "list-group-item"}
+						Tuesday 3rd September 2013
+					%li{:class => "list-group-item"}
+						Saturay 31st Satuday 2013

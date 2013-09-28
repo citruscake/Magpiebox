@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+            <tillsync_catalog translate="title" module="tillsync">
+                <model>Eposnow_TillSync/catalog_api2</model>
+                <title>EposNow TillSync API</title>
+                <acl>tillsynccatalog</acl>
+                <methods>
+                    <update translate="title" module="tillsync">
+                        <title>Saves an updated EposNow object</title>
+                        <method>update</method>
+                        <acl>tillsynccatalog/update</acl>
+                    </update>
+                    <retrieve translate="title" module="tillsync">
+                        <title>Gets the Magento ID from the EposNowID</title>
+                        <method>getid</method>
+                        <acl>tillsynccatalog/getid</acl>
+                    </retrieve>
+                    <delete translate="title" module="tillsync">
+                        <title>Delete an object</title>
+                        <method>delete</method>
+                        <acl>tillsynccatalog/delete</acl>
+                    </delete>
+                </methods>
+            </tillsync_catalog>
+        </resources>
+        <v2>
+            <resources_function_prefix>
+                <tillsync_catalog>tillsync_catalog</tillsync_catalog>
+            </resources_function_prefix>
+        </v2> 
+        <acl>
+            <resources>
+                <tillsync_catalog translate="title" module="tillsync">
+                    <title>EposNow</title>
+                    <sort_order>3</sort_order>
+                    <update translate="title" module="tillsync">
+                        <title>Saves an updated EposNow object</title>
+                    </update>
+                    <retrieve translate="title" module="tillsync">
+                        <title>Gets the Magento ID from the EposNowID</title>
+                    </retrieve>
+                    <delete translate="title" module="tillsync">
+                        <title>Delete an object</title>
+                    </delete>
+                </tillsync_catalog>
+            </resources>
+        </acl>
+    </api>
+</config>

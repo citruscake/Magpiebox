@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<config>
+    <api2>
+        <resource_groups>
+            <tillsync translate="title" module="api2">
+                <title>EposNow TillSync API calls</title>
+                <sort_order>30</sort_order>
+                <children>
+                    <tillsync_product translate="title" module="api2">
+                        <title>Product</title>
+                        <sort_order>50</sort_order>
+                    </tillsync_product>
+                    <tillsync_category translate="title" module="api2">
+                        <title>Category</title>
+                        <sort_order>50</sort_order>
+                    </tillsync_category>
+                    <tillsync_stock translate="title" module="api2">
+                        <title>Stock</title>
+                        <sort_order>50</sort_order>
+                    </tillsync_stock>
+                </children>
+            </tillsync>
+        </resource_groups>
+        
+        <resources>
+            <eposnowproduct translate="title" module="api2">
+                <group>tillsync_product</group>
+                <model>Eposnow_TillSync/catalog_api2_product</model>
+                <working_model>Eposnow_TillSync/catalog_api2_product</working_model>
+                <title>EposNow Product</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <update>1</update>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes translate="product" module="api2">
+                    <product>Product</product>
+                </attributes>
+                <routes>
+                    <route_entity_update>
+                        <route>/eposnow/products/update</route>
+                        <action_type>entity</action_type>
+                    </route_entity_update>
+                    <route_entity_getid>
+                        <route>/eposnow/products/getid/:eposnowid</route>
+                        <action_type>entity</action_type>
+                    </route_entity_getid>
+                </routes>
+                <versions>1</versions>
+            </eposnowproduct>
+
+             <eposnowcategory translate="title" module="api2">
+                <group>tillsync_category</group>
+                <model>Eposnow_TillSync/catalog_api2_category</model>
+                <working_model>Eposnow_TillSync/catalog_api2_category</working_model>
+                <title>EposNow Category</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <update>1</update>
+                        <retrieve>1</retrieve>
+                        <delete>1</delete>
+                    </admin>
+                </privileges>
+                <attributes translate="category" module="api2">
+                    <category>Category</category>
+                </attributes>
+                <routes>
+                    <route_entity_update>
+                        <route>/eposnow/categories/update</route>
+                        <action_type>entity</action_type>
+                    </route_entity_update>
+                    <route_entity_delete>
+                        <route>/eposnow/categories/delete/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity_delete>
+                    <route_entity_getid>
+                        <route>/eposnow/categories/getid/:eposnowid</route>
+                        <action_type>entity</action_type>
+                    </route_entity_getid>
+                </routes>
+                <versions>1</versions>
+            </eposnowcategory>
+
+            <eposnowstock translate="title" module="api2">
+                <group>tillsync_stock</group>
+                <model>Eposnow_TillSync/catalog_api2_stock</model>
+                <working_model>Eposnow_TillSync/catalog_api2_stock</working_model>
+                <title>EposNow Stock</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <update>1</update>
+                    </admin>
+                </privileges>
+                <attributes translate="stock" module="api2">
+                    <stock>Stock</stock>
+                </attributes>
+                <routes>
+                    <route_entity_update>
+                        <route>/eposnow/stock/update</route>
+                        <action_type>entity</action_type>
+                    </route_entity_update>
+                </routes>
+                <versions>1</versions>
+            </eposnowstock>
+        </resources>
+    </api2>
+</config>

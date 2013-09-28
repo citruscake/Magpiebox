@@ -1,0 +1,30 @@
+%article
+	.row-fluid
+		.blog-header
+			.row-fluid
+				%header{:class => "title-container"}
+					%h1
+						:plain
+							<?php
+								echo $post['title'];
+							?>
+				.row-fluid
+					.date-container
+						:plain
+							<?php
+								echo "<time datetime=\"".$post['pubDate']."\" pubDate>".$post['pubDate']."</time>";
+							?>
+						.name
+							:plain
+								<?php
+									echo $post['author'];
+								?>
+	#divider.row-fluid
+	.row-fluid
+		.blog-body
+			.row-fluid
+				.body-container
+					:plain
+						<?php
+							echo $post['description'];
+						?>

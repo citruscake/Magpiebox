@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>EposnowTillSync</name>
+    <version>0.7.52</version>
+    <stability>stable</stability>
+    <license>na</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Module to sync Magento with the EposNow till system</summary>
+    <description>Module to sync Magento with the EposNow till system</description>
+    <notes>Alpha release</notes>
+    <authors><author><name>Adam Moore</name><user>admin</user><email>adam@acmoore.co.uk</email></author></authors>
+    <date>2013-08-16</date>
+    <time>13:52:23</time>
+    <contents><target name="magelocal"><dir name="Eposnow"><dir name="TillSync"><dir name="Block"><dir name="Adminhtml"><dir name="Form"><dir name="Renderer"><dir name="Config"><file name="Version.php" hash="1f231ffc364d939d06a5529bc76ea423"/></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="97d6a707814f9654d64201b182cb77e8"/><file name="Request.php" hash="08b22eda31ac1b91f401227d5b357e04"/></dir><dir name="Model"><dir name="Catalog"><dir name="Api2"><dir name="Category"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="a60e6510e9124bf3000f1713c232d564"/></dir></dir></dir><file name="Category.php" hash="d41d8cd98f00b204e9800998ecf8427e"/><dir name="Product"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="a9805a0867dc47490ffdd60ec0814409"/></dir></dir></dir><file name="Product.php" hash="d41d8cd98f00b204e9800998ecf8427e"/><dir name="Stock"><dir name="Rest"><dir name="Admin"><file name="V1.php" hash="aa8715e13d8c3343ab3565f77c183d3e"/></dir></dir></dir><file name="Stock.php" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir><file name="Observer.php" hash="1fb530fc55a76c276b472b9f84210e8e"/><file name="Observer.php.bak" hash="6117eb289491496f907cd28f1df52160"/></dir><dir name="etc"><file name="api.xml" hash="f47e554d83d946aceeb533d9609e8534"/><file name="api2.xml" hash="352addfb5ed27b4f6707651cdda77f51"/><file name="config.xml" hash="59ee1faed33d6c1bcb859bbaef32f234"/><file name="system.xml" hash="f0ac3b57de831b8c154160dbebaf0af0"/></dir></dir></dir><dir name="Mage"><dir name="Api2"><dir name="Model"><file name="Request.php" hash="2fefc66bcedeca51aa22e9900b4c4e25"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Eposnow_TillSync.xml" hash="ff672db2c824c38dfd8cc437baca415c"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
