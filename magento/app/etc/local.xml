@@ -41,8 +41,8 @@
       <default_setup>
         <connection>
           <host><![CDATA[localhost]]></host>
-          <username>mbox</username>
-          <password>magpiebox2013</password>
+          <username>root</username>
+          <password></password>
           <dbname>mbox_magento</dbname>
           <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
           <model><![CDATA[mysql4]]></model>

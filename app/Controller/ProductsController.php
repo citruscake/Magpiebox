@@ -300,10 +300,13 @@ class ProductsController extends AppController {
 		//api key mm50E7Df44cg746thu8!&*V2cGr9Ca
 		$sessionId = $client->login('magpiebox', 'mm50E7Df44cg746thu8!&*V2cGr9Ca');
 		//$result = $client->call($session, 'catelog_category.tree');
-		$results = $client->catalogProductList($sessionId);
+		//$results = $client->catalogProductList($sessionId);
 		//$products = get_object_vars($result);
-		$item = parent::parseResult($results[1]);
-		$inventory = $client->catalogInventoryStockItemList($sessionId, array($item['product_id']));
+		//$item = parent::parseResult($results[1]);
+		//$inventory = $client->catalogInventoryStockItemList($sessionId, array($item['product_id']));
+		
+		var_dump($client->Magpiebox_product_info($sessionId));
+		
 		//echo parent::parseResult($inventory[0])['qty'];
 		
 		foreach($results as $result) {
