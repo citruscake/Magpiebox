@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <api>
+        <resources>
+			<magpieboxproductinfo translate="title" module="Magpiebox_ProductInfo">
+				<title>Product Information</title>
+				<!--<acl>magpieboxproduct</acl>-->
+				<model>ProductInfo/Product_api</model>
+				<methods>
+					<methodName translate="title" module="Magpiebox_ProductInfo">
+						<title>Title Of My Method</title>
+					</methodName>
+					<!-- <list translate="title" module="Magpiebox_ProductInfo">
+						<title>List Products</title>
+						<method>items</method>
+						<acl>magpieboxproductinfo/list</acl>
+					</list>
+					<create translate="title" module="magpiebox_product">
+						<title>Create Product</title>
+						<acl>magpieboxproduct/create</acl>
+					</create>
+					<info translate="title" module="magpiebox_product">
+						<title>Retrieve Product</title>
+						<acl>magpieboxproduct/info</acl>
+					</info>
+					<update translate="title" module="magpiebox_product">
+						<title>Update Product</title>
+						<acl>magpieboxproduct/update</acl>
+					</update>
+					<delete translate="title" module="magpiebox_product">
+						<title>Delete Product</title>
+						<acl>magpieboxproduct/delete</acl>
+					</delete> -->
+				</methods>
+				<!--<faults module="magpiebox_product">
+					<data_invalid> //if we get invalid input data for customers
+						<code>100</code >
+						//we cannot know all the errors that can appear, their details can be found in error message for call
+						<message>Invalid Product data. Details in error message.</message>
+					</data_invalid>
+					<filters_invalid>
+                       <code>101</code >
+                       <message>Invalid filters specified. Details in error message.</message>
+					</filters_invalid>
+					<not_exists>
+                        <code>102</code >
+						<message>Product doesn't exist.</message>
+					</not_exists>
+					<not_deleted>
+						<code>103</code >
+						<message>Product was not deleted. Details in error message.</message>
+					</not_deleted>            
+				</faults> -->
+			</magpieboxproductinfo>
+        </resources>
+		<!--<v2>
+			<resources_function_prefix>
+				<magpieboxproduct>magpiebox_product</magpieboxproduct>
+			</resources_function_prefix>
+		</v2>-->
+       <!-- <acl>
+            <resources>
+               <magpieboxproduct translate="title" module="magpiebox_product">
+					<title>Product Information</title>
+					<list translate="title" module="magpiebox_product">
+						<title>View All</title>
+					</list>
+					<create translate="title" module="magpiebox_product">
+						<title>Create</title>
+					</create>
+					<info translate="title" module="magpiebox_product">
+						<title>Retrieve</title>
+					</info>
+					<update translate="title" module="magpiebox_product">
+						<title>Update</title>
+					</update>
+					<delete translate="title" module="magpiebox_product">
+						<title>Delete</title>
+					</delete>	
+			   </magpieboxproduct>
+            </resources>
+        </acl>-->
+    </api>
+</config>

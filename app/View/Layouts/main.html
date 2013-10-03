@@ -21,6 +21,7 @@
     <link href='/css/bootstrap/bootstrap.css' rel='stylesheet'>
     <link href='/css/styles.css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Emblema+One' rel='stylesheet'>
     <script src='/js/vendor/modernizr-2.6.2.min.js'></script>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
     <script>
@@ -51,6 +52,10 @@
             </div>
           </div>
         </div>
+      </div>
+    </header>
+    <section id='nav'>
+      <div class='container-fluid'>
         <div class='row-fluid'>
           <div class='span10'>
             <nav>
@@ -73,7 +78,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </section>
     <section id='content'>
       <div class='container-fluid'>
         <?php
@@ -82,23 +87,11 @@
       </div>
     </section>
     <footer id='footer'>
-      <nav>
-        <ul>
-          <li>
-            <a>
-              Terms and conditions
-            </a>
-          </li>
-          <li>
-            <span class='glyphicon glyphicon-star-empty'></span>
-          </li>
-          <li>
-            <a>
-              Legal
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class='container-fluid'>
+        <div class='row-fluid'>
+          <div class='span6'></div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

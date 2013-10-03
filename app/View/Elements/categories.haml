@@ -1,0 +1,25 @@
+#categories_container
+	.row-fluid
+		%nav
+			%ul{:class => "nav nav-pills nav-stacked"}
+				%li
+					:plain	
+						<?php
+							echo $this->Html->link('All Items', array('controller'=>'products', 'action'=>'index'));
+						?>
+				:plain
+					<?php
+						foreach ($categories as $category) {
+	
+							echo "<li>".$this->Html->link($category['name'], array('controller'=>'products', 'action'=>'index', $category['category_id']))."</li>";
+
+						}
+					?>
+:plain
+	<?php
+		/* if(isset($current_query)) {
+		if($current_query == true) {
+			echo "<li>".$this->Html->link('Search results', array('controller'=>'products', 'action'=>'search'))."</li>";
+		}
+	}*/
+	?>

@@ -8,10 +8,11 @@
 							echo $brand['title'];
 						?>
 		.row-fluid
-			:plain
-				<?php
-					echo $this->Html->image('/img/brands/'.$brand['image_file_name'].'.jpg', array('alt' => 'CakePHP'));
-				?>
+			.image-container
+				:plain
+					<?php
+						echo $this->Html->image('/img/brands/'.$brand['image_file_name'].'.jpg', array('alt' => 'CakePHP'));
+					?>
 		.row-fluid
 			%content
 				%p

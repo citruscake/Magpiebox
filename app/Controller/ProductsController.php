@@ -4,18 +4,14 @@ App::uses('AppController', 'Controller');
 
 class ProductsController extends AppController {
 
-	//App::uses('AppController', 'Controller');
-
 	var $helpers = array('Form','Html','Session');
-	//var $components = array('wizard');
 	var $uses = array('Product', 'Category', 'Basket', 'DailyItem');
 	var $validateFile = array(
 						'size' => 204800,
 						'type' => array('image/jpg','image/jpeg','image/png','image/gif')
 						);
 	var $fileData;
-	//var $excludedColumns = array('created', 'modified', 'image_url', 'thumbnail_url');
-							
+
 	public function view($id = null) {
 			$this->layout = "shop_main";
 			$this->set('page_type', 'shop');
@@ -291,31 +287,26 @@ class ProductsController extends AppController {
 	public function index($category_id=null,$page=null) {
 
 		$this->layout = "main";
-		
-		$this->set('breadcrumb_depth',1);
-
-		//$client = new SoapClient('http://'.env('HTTP_HOST').'/magento/api/v2_soap?wsdl=1');
-		$client = new SoapClient('http://www.magpiebox.com/magento/api/v2_soap?wsdl=1');
-		//$client = new SoapClient('http://127.0.0.1/magento/api/v2_soap?wsdl=1');
-		//api key mm50E7Df44cg746thu8!&*V2cGr9Ca
+		$client = new SoapClient('http://www.magpiebox.com/magento/api/?wsdl=1'); //new SoapClient('http://www.magpiebox.com/magento/api/v2_soap?wsdl=1');
 		$sessionId = $client->login('magpiebox', 'mm50E7Df44cg746thu8!&*V2cGr9Ca');
-		//$result = $client->call($session, 'catelog_category.tree');
+		echo "Login ID : $sessionId";
+		$result = $client->call($sessionId, 'magpieboxproductinfo.methodName', array('param1' => 'the argument passed...'));
+		echo $result;
+		/*$this->set('breadcrumb_depth',1);
+
+		echo "hi";*/
+		
+		/*$client = new SoapClient('http://www.magpiebox.com/magento/api/v2_soap?wsdl=1');
+		$sessionId = $client->login('magpiebox', 'mm50E7Df44cg746thu8!&*V2cGr9Ca');
 		$results = $client->catalogProductList($sessionId);
-		//$products = get_object_vars($result);
 		$item = parent::parseResult($results[1]);
 		$inventory = $client->catalogInventoryStockItemList($sessionId, array($item['product_id']));
-		//echo parent::parseResult($inventory[0])['qty'];
 		
 		foreach($results as $result) {
 			$item = parent::parseResult($result);
-			//echo $item['product_id'];
-			//$inventory = $client->catalogInventoryStockItemList($sessionId, $item['product_id']);
-			//$inventory = $client->catalogInventoryStockItemList($sessionId , array($item['product_id']));
-			//echo $inventory['qty'];
-			//var_dump($item);
 			echo $item['name'];
 			echo "</br>";
-		}
+		}*/
 		//foreach($result as $item) {
 		//	echo $item['name']."</br>";
 		//}
@@ -326,50 +317,107 @@ class ProductsController extends AppController {
 		
 		}
 		
+		*/
 		if (isset($category_id)) {
-		
-			$this->set('breadcrumb_depth',2);
-			$products = $this->Product->find('all', array('conditions' => array('Product.category_id' => $category_id)));
-			$this->set('products', $products);
-			$this->Category->id = $category_id;
-			$category = $this->Category->read();
-			$this->set('category', $category['Category']);
+			$options = array(
+				"category_id" => $category_id
+			);
+			var_dump($this->getProducts($options));
+			
 			
 		}
+		/*
 		else {
 
 			$products = $this->Product->find('all', array('order' => array('Product.created DESC')));
-			$this->set('products', $products);
+			//$this->set('products', $products);
 			$this->set('category', array("Category"=>array("name"=>"All items")));
-		}
-		
-		$this->set('categories', $this->getCategories());
-		*/
-		
+		}*/
+
 	}
 	
 	private function parseCategories($tree) {
 	
+		$returnArray = array();
 		$parsedTree = parent::parseResult($tree);
 		foreach($parsedTree['children'] as &$node) {
 			$node = $this->parseCategories($node);
 		}
-		return array_diff_key($parsedTree, array('parent_id', 'position', 'is_active'));
+
+		foreach(array_keys($parsedTree) as $key) {
+			if (!in_array($key, array('parent_id', 'position', 'is_active'))) {
+				$returnArray[$key] = $parsedTree[$key];
+			}
+		}
+		return $returnArray;
 		
 	}
 	
+	private function parseProducts($array) {
+		
+		$returnArray = array();
+		foreach($array as $product) {
+			$parsedArray = parent::parseResult($product);
+			$temp = array();
+			foreach(array_keys($parsedArray) as $key) {
+				if(!in_array($key, array('type','set','position'))) {
+					$temp[$key] = $parsedArray[$key];
+				}
+			}
+			array_push($returnArray, $temp);
+		}
+		return $returnArray;
+	}
 	
-	public function getCategories() {
+	private function getCategories() {
+		return $this->soapRequest("categories");
+	}
 	
-		$excludedKeys = array();
+	private function getProducts($options) {
+		if(in_array("category_id", array_keys($options))) {
+			return $this->soapRequest("products", array("category_id" => $options["category_id"]));
+		}
+		else if(in_array("product_id", array_keys($options))) {
+			return $this->soapRequest("products", array("product_id" => $options["product_id"]));
+		}
+		else {
+			throw new CakeException("Need to have either a product_id or category_id specified in options");
+		}
+	}
+	
+	private function soapRequest($request_type, $options=array()) {
 	
 		$client = new SoapClient('http://www.magpiebox.com/magento/api/v2_soap?wsdl=1');
 		$sessionId = $client->login('magpiebox', 'mm50E7Df44cg746thu8!&*V2cGr9Ca');
-		$categoryTree = $client->catalogCategoryTree($sessionId);
-		$categories = $this->parseCategories($categoryTree);
-		var_dump($categories);
+		$result = "";
+	
+		switch($request_type) {
+			case "categories" :
+				$categoryTree = $client->catalogCategoryTree($sessionId);
+				$categories = $this->parseCategories($categoryTree);
+				$result = $categories['children'][0]['children'];
+				break;
+			case "products" :
+				if(in_array("product_id", array_keys($options))) {
+					// return the product information
+				}
+				else if(in_array("category_id", array_keys($options))) {
+					//$productArray = $client->catalogCategoryAssignedProducts($sessionId, $options["category_id"]);
+					//$products = $this->parseProducts($productArray);
+					//$result = $products;
+					$productArray = $client->call(magpiebox/productmodel_api.items(array()));
+					break;
+				}
+			default:
+				//return array();
+				//throw exception
+		}
 		
+		$client->endSession();
+		return $result;
+	
 	}
+	
 	
 	public function getDailyProduct() {
 	
@@ -790,6 +838,8 @@ class ProductsController extends AppController {
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
+		
+		$this->set('categories', $this->getCategories());
 		//if($this->Session->check('Auth.User')) {
 		//	$this->set('user', $this->Session->read('Auth.User'));
 		//}

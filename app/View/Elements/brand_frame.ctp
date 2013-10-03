@@ -10,9 +10,11 @@
       </header>
     </div>
     <div class='row-fluid'>
-      <?php
-      	echo $this->Html->image('/img/brands/'.$brand['image_file_name'].'.jpg', array('alt' => 'CakePHP'));
-      ?>
+      <div class='image-container'>
+        <?php
+        	echo $this->Html->image('/img/brands/'.$brand['image_file_name'].'.jpg', array('alt' => 'CakePHP'));
+        ?>
+      </div>
     </div>
     <div class='row-fluid'>
       <content>
