@@ -3,7 +3,7 @@
     <div class='span10'>
       <header>
         <h1>
-          Brands we stock
+          Brands we stock.
         </h1>
       </header>
     </div>

@@ -1,20 +1,13 @@
 <div id='home_container'>
   <div class='row-fluid'>
-    <div id='banner_container'>
-      <div class='span4'></div>
-      <div class='span4'></div>
-      <div class='span2'></div>
-    </div>
+    <header>
+      <h1>
+        Welcome to Magpiebox.
+      </h1>
+    </header>
   </div>
   <div class='row-fluid'>
     <div id='intro_container'>
-      <div class='row-fluid'>
-        <header>
-          <h1>
-            Welcome to Magpiebox.
-          </h1>
-        </header>
-      </div>
       <div class='row-fluid'>
         <p>
           Magpiebox is a new gift shop located in the heard of Startford-upon-Avon. We work hard to find new and exciting stock

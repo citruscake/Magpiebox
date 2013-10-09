@@ -144,6 +144,7 @@ html {
 }
 
 #content {
+  padding-bottom: 1.5em;
   padding-top: 1.5em;
   background-color: white;
 }
@@ -156,12 +157,18 @@ html {
   padding-right: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 85%;
 }
 #content .container-fluid:after {
   content: "";
   display: table;
   clear: both;
+}
+#content .container-fluid #products_container .row-fluid .span2 nav ul {
+  background-color: #eeeeee;
+}
+#content .container-fluid #products_container .row-fluid .span2 nav ul li a {
+  color: #333333;
 }
 #content .container-fluid #home_container {
   width: 100%;
@@ -174,6 +181,17 @@ html {
   *margin-left: -10px;
   display: inline;
 }
+#content .container-fluid #home_container .row-fluid header {
+  width: 100%;
+  float: left;
+  margin-right: 2.43902%;
+  display: inline;
+  margin-top: 1.5em;
+}
+#content .container-fluid #home_container .row-fluid header h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
 #content .container-fluid #home_container .row-fluid #intro_container {
   overflow: hidden;
   width: 36.05769%;
@@ -184,16 +202,6 @@ html {
 }
 #content .container-fluid #home_container .row-fluid #intro_container .row-fluid {
   overflow: auto;
-}
-#content .container-fluid #home_container .row-fluid #intro_container .row-fluid header {
-  width: 100%;
-  float: left;
-  margin-right: 2.43902%;
-  display: inline;
-}
-#content .container-fluid #home_container .row-fluid #intro_container .row-fluid header h1 {
-  font-size: 1.5em;
-  line-height: 2em;
 }
 #content .container-fluid #home_container .row-fluid #intro_container .row-fluid p {
   margin-top: 1.5em;
@@ -210,7 +218,7 @@ html {
   margin-top: -2px;
 }
 #content .container-fluid #home_container .row-fluid #main_image_container {
-  margin-top: 0.75em;
+  margin-top: 1.5em;
   width: 59.61538%;
   float: left;
   margin-right: 0.96154%;
@@ -355,17 +363,21 @@ html {
   color: #444444;
 }
 #content .container-fluid #brands_container .row-fluid header {
-  width: 100%;
+  display: none;
+  width: 93.26923%;
   float: left;
   margin-right: 0.96154%;
   display: inline;
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 #content .container-fluid #brands_container .row-fluid header h1 {
   font-size: 2em;
   line-height: 1.5em;
 }
 #content .container-fluid #brands_container .row-fluid #brands_gallery {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.5em;
   width: 100%;
   float: left;
@@ -373,22 +385,52 @@ html {
   display: inline;
 }
 #content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article {
-  width: 17.01031%;
+  width: 21.17117%;
   float: left;
-  margin-right: 1.03093%;
+  margin-right: 0.9009%;
   display: inline;
-  margin-right: 3.60825%;
+  margin-right: 3.15315%;
+}
+#content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid header {
+  text-align: center;
+  background-color: #fafafa;
+  transition: background-color 0.3 ease;
+  color: #222222;
+  width: 100%;
+  float: left;
+  margin-right: 5%;
+  display: inline;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dfdfdf;
+  margin: 0em;
+  box-sizing: border-box;
+  padding: 0em 1em 0em 1em;
+  min-height: 42px;
+}
+#content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid header:hover {
+  background-color: #eeeeee;
+  cursor: default;
 }
 #content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid header h1 {
   font-size: 1.5em;
   line-height: 2em;
+  line-height: 2em;
 }
-#content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid img {
+#content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid .image-container {
+  text-align: center;
+}
+#content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid .image-container img {
   max-width: 100%;
   margin-top: 1.5em;
+  height: 126px;
 }
 #content .container-fluid #brands_container .row-fluid #brands_gallery .brand-frame article .row-fluid content p {
   margin-top: -6px;
+  text-align: left;
+  padding: 0em 0em 0em 1em;
+  box-sizing: border-box;
+  margin-bottom: 3em;
 }
 #content .container-fluid #find_us_container {
   padding-top: 1.5em;
@@ -396,19 +438,17 @@ html {
   overflow: auto;
   margin-bottom: 1.5em;
 }
+#content .container-fluid #find_us_container .row-fluid header h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
 #content .container-fluid #find_us_container .row-fluid .span6 {
   width: 49.51923%;
   float: left;
   margin-right: 0.96154%;
   display: inline;
   margin-right: 3.36538%;
-}
-#content .container-fluid #find_us_container .row-fluid .span6 .row-fluid header {
-  margin-bottom: 0.75em;
-}
-#content .container-fluid #find_us_container .row-fluid .span6 .row-fluid header h1 {
-  font-size: 2em;
-  line-height: 1.5em;
 }
 #content .container-fluid #find_us_container .row-fluid .span6 .row-fluid p {
   margin-bottom: 1.5em;
@@ -427,7 +467,6 @@ html {
   display: inline;
 }
 #content .container-fluid #find_us_container .row-fluid .span4 .row-fluid #google_map_container {
-  margin-top: 6.75em;
   width: 100%;
   float: left;
   margin-right: 2.08333%;
@@ -631,14 +670,6 @@ body {
 
 #header {
   background-color: #140e14;
-  background: #191919;
-  background: -moz-linear-gradient(top, #191919 0%, #131313 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #191919), color-stop(100%, #131313));
-  background: -webkit-linear-gradient(top, #191919 0%, #131313 100%);
-  background: -o-linear-gradient(top, #191919 0%, #131313 100%);
-  background: -ms-linear-gradient(top, #191919 0%, #131313 100%);
-  background: linear-gradient(to bottom, #191919 0%, #131313 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#191919', endColorstr='#131313',GradientType=0 );
 }
 #header .container-fluid {
   *zoom: 1;
@@ -648,7 +679,7 @@ body {
   padding-right: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 85%;
 }
 #header .container-fluid:after {
   content: "";
@@ -656,7 +687,7 @@ body {
   clear: both;
 }
 #header .container-fluid .row-fluid {
-  padding-top: 4.5em;
+  padding-top: 3em;
 }
 #header .container-fluid .row-fluid .span3 {
   margin-bottom: 1.5em;
@@ -669,16 +700,39 @@ body {
   display: inline;
   height: 42px;
   margin: 0px;
-  margin-bottom: 0.75em;
+  margin-bottom: 1.5em;
 }
 #header .container-fluid .row-fluid .span3 #logo_frame img {
   margin-top: -2px;
   width: 90%;
 }
-#header .container-fluid .row-fluid nav .nav-bar .nav-tabs {
+
+#nav {
+  background-color: #140e14;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
+}
+#nav .container-fluid {
+  *zoom: 1;
+  max-width: 1040px;
+  _width: 1040px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 85%;
+  max-width: 85%;
+}
+#nav .container-fluid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#nav .container-fluid .row-fluid nav .nav-bar .nav-tabs {
   border: none;
 }
-#header .container-fluid .row-fluid nav .nav-bar .nav-tabs li {
+#nav .container-fluid .row-fluid nav .nav-bar .nav-tabs li {
   margin: 0px;
   width: 12.5%;
   float: left;
@@ -686,11 +740,11 @@ body {
   display: inline;
   text-align: center;
 }
-#header .container-fluid .row-fluid nav .nav-bar .nav-tabs li a {
+#nav .container-fluid .row-fluid nav .nav-bar .nav-tabs li a {
   color: white;
   border-radius: 2px 2px 0px 0px;
-  border-color: #140e14;
-  border-width: 1px 1px 0px 1px;
+  border-color: #333333;
+  border-width: 2px 0px 0px 0px;
   border-style: solid;
   margin-top: 0.7em;
   padding-top: 0.75em;
@@ -708,26 +762,27 @@ body {
   transition-duration: 0.1s;
   transition-timing-function: ease;
 }
-#header .container-fluid .row-fluid nav .nav-bar .nav-tabs li a:hover {
+#nav .container-fluid .row-fluid nav .nav-bar .nav-tabs li a:hover {
   border-width: 1px 1px 0px 1px;
   border-style: solid;
   border-color: #140e14;
   color: white;
   text-shadow: none;
-  background-color: #8569a3;
+  background-color: #614580;
 }
-#header .container-fluid .row-fluid nav .nav-bar .nav-tabs li.active a {
+#nav .container-fluid .row-fluid nav .nav-bar .nav-tabs li.active a {
   border-radius: 2px 2px 0px 0px;
   text-shadow: none;
-  background-color: #8569a3;
-  color: white;
-  border-width: 1px 1px 0px 1px;
+  background-color: white;
+  color: #222222;
+  border-width: 2px 0px 0px 0px;
   border-style: solid;
   border-color: #140e14;
 }
 
 #footer {
-  height: 42px;
+  height: 105px;
+  background-color: #eeeeee;
 }
 #footer nav {
   width: 79.80769%;

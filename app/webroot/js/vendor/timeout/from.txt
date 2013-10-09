@@ -1,0 +1,1 @@
+https://raw.github.com/cowboy/jquery-dotimeout/v1.0/jquery.ba-dotimeout.min.js

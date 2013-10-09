@@ -1,0 +1,14 @@
+<h2>Browse by Brand</h2>
+<div class="block">
+<ul id="nav_category" class="nav_category">
+	<?php
+
+	$config = Mage::getModel('eav/config');
+	var_dump($config);
+	
+	foreach ($this->getStoreCategories() as $_category): ?>
+		<?php echo $this->drawItem($_category) ?>
+	<?php endforeach ?>
+</ul>
+</div>
+<?php echo $this->getChildHtml('topLeftLinks') ?>

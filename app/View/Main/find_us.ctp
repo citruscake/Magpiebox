@@ -1,14 +1,14 @@
 <div id='find_us_container'>
   <div class='row-fluid'>
+    <header>
+      <h1>
+        <!-- /%span{:class => "glyphicon glyphicon-map-marker"} -->
+        You will find us in the heart of Stratford-upon-Avon.
+      </h1>
+    </header>
+  </div>
+  <div class='row-fluid'>
     <div class='span6'>
-      <div class='row-fluid'>
-        <header>
-          <h1>
-            <!-- /%span{:class => "glyphicon glyphicon-map-marker"} -->
-            You will find us in the heart of Stratford-upon-Avon.
-          </h1>
-        </header>
-      </div>
       <div class='row-fluid'>
         <p>
           Phasellus quis leo id lectus molestie volutpat. Vivamus iaculis pellentesque gravida. Nullam facilisis orci dui, sit amet ultrices massa auctor ac. Morbi ullamcorper ipsum nec tellus laoreet blandit. Pellentesque sit amet neque non orci fermentum vestibulum. Quisque fringilla metus in felis tincidunt, et lobortis elit ultricies. Morbi sem nulla, sollicitudin a tincidunt ac, feugiat ac orci. Nunc pulvinar eu nunc vehicula malesuada. Curabitur adipiscing risus eu massa ornare convallis. Donec consequat dolor est, et facilisis arcu commodo ac. Integer sed blandit urna, eget suscipit augue. Etiam quis felis et metus venenatis congue. Phasellus molestie leo sapien, vel tempor nunc lobortis sit amet. Integer aliquet adipiscing suscipit.

@@ -1,0 +1,18 @@
+<h4>Browse by Brand</h4>
+<div class="block">
+<ul id="nav_category" class="nav_category nav nav-pills nav-stacked">
+	<?php 
+		$categoryNames = array();
+		$categories = array();
+		foreach ($this->getStoreCategories() as $_category):
+			$categoryNames[] = $_category->getName();
+			$categories[] = $_category;
+		endforeach;
+		asort($categoryNames);
+		foreach($categoryNames as $key=>$name):
+			echo $this->drawItem($categories[$key]);
+		endforeach;
+	?>
+</ul>
+</div>
+<?php echo $this->getChildHtml('topLeftLinks') ?>

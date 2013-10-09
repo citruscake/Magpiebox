@@ -1,5 +1,5 @@
 $header_bg : rgba(151, 151, 151, 0.2) //rgba(151, 50, 50, 0.2)
-$max-width : 80%
+$max-width : 85%
 
 @import "compass"
 @import "compass/reset"
@@ -37,7 +37,7 @@ $max-width : 80%
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ) /* IE6-9 */
 		
 #content
-	//+padding-trailer(2)
+	+padding-trailer(1)
 	+padding-leader(1)
 	background-color : #ffffff //#8569A3 //rgb(91, 61, 92) //rgb(91, 61, 92) //#fcfcfc
 	//background-color : #533E63 //#dddddd //#362C3D
@@ -51,12 +51,29 @@ $max-width : 80%
 		+container
 		max-width : $max-width
 
+		#products_container
+			.row-fluid
+				.span2
+					nav
+						ul
+							background-color : #eeeeee
+							li
+								a
+									color : #333333
+		
+		
+		
 		#home_container
 			//+padding-leader(1)
 			+span-columns(30,30)
 			border-radius : 2px
 			+omega
 			.row-fluid
+				header
+					+span-columns(12,12)
+					+leader(1)
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
 				#intro_container
 					overflow : hidden
 					//+leader(1)
@@ -66,10 +83,6 @@ $max-width : 80%
 					//+pre(1,30)
 					.row-fluid
 						overflow : auto
-						header
-							+span-columns(12,12)
-							h1
-								+adjust-font-size-to(1.5 * $base-font-size)
 						p
 							+leader(1)
 						#gift_list
@@ -80,7 +93,7 @@ $max-width : 80%
 							span
 								margin-top : -2px
 				#main_image_container
-					+leader(0.5)
+					+leader(1)
 					+span-columns(18,30)
 					+omega
 					+pre(1,30)
@@ -180,28 +193,58 @@ $max-width : 80%
 		#brands_container
 			.row-fluid
 				header
-					+span-columns(30,30)
+					display : none
+					+span-columns(28,30)
 					+leader(1)
+					//+pre(1,30)
+					+trailer(1)
 					h1
 						+adjust-font-size-to(2 * $base-font-size)
 				#brands_gallery
+					margin-left : auto
+					margin-right : auto
 					+trailer(1)
 					+span-columns(30,30)
 					.brand-frame
 						article
-							+span-columns(5,28)
-							+post(1,28)
+							+span-columns(7,32)
+							+post(1,32)
 							.row-fluid
 								header
+									text-align : center
+									background-color : #fafafa
+									transition : background-color 0.3 ease
+									&:hover
+										background-color : #eeeeee
+										cursor : default
+									color : #222222
+									+span-columns(6,6)
+									border-style : solid
+									border-width : 1px
+									border-color : #dfdfdf
+									margin : 0em
+									box-sizing : border-box
+									padding : 0em 1em 0em 1em
+									min-height : 2 * $base-line-height
 									h1
+										//font-family : Emblema One
 										+adjust-font-size-to(1.5 * $base-font-size)
-								img
-									max-width : 100%
-									//+trailer(1)
-									+leader(1)
+										+adjust-leading-to(4/3)
+								.image-container
+									text-align : center
+									img
+										max-width : 100%
+										//+trailer(1)
+										+leader(1)
+										height : 6 * $base-line-height
 								content
 									p
+										//background-color : #eeeeee
 										margin-top : -6px
+										text-align : left
+										padding : 0em 0em 0em 1em
+										box-sizing: border-box
+										+trailer(2)
 							
 		#find_us_container
 			+padding-leader(1)
@@ -210,15 +253,15 @@ $max-width : 80%
 			overflow : auto
 			+trailer(1)
 			.row-fluid
+				header
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+						+trailer(0.5)
 				.span6
 					+span-columns(15,30)
 					//+pre(1,30)
 					+post(1,30)
 					.row-fluid
-						header
-							h1
-								+adjust-font-size-to(2 * $base-font-size)
-							+trailer(0.5)
 						p
 							+trailer(1)
 						#google_map_container
@@ -228,7 +271,7 @@ $max-width : 80%
 					+omega
 					.row-fluid
 						#google_map_container
-							+leader(4.5)
+							//+leader(4.5)
 							+span-columns(14,14)
 							+omega
 		#blog_container
@@ -368,21 +411,21 @@ body
 #header
 	background-color : rgb(20, 14, 20) //#222222 //#241C2C //#222222
 	
-	background: #191919 /* Old browsers */
-	background: -moz-linear-gradient(top,  #191919 0%, #131313 100%) /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191919), color-stop(100%,#131313)) /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #191919 0%,#131313 100%) /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #191919 0%,#131313 100%) /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #191919 0%,#131313 100%) /* IE10+ */
-	background: linear-gradient(to bottom,  #191919 0%,#131313 100%) /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#131313',GradientType=0 ) /* IE6-9 */
-
+	//background: #191919 /* Old browsers */
+	//background: -moz-linear-gradient(top,  #191919 0%, #131313 100%) /* FF3.6+ */
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191919), color-stop(100%,#131313)) /* Chrome,Safari4+ */
+	//background: -webkit-linear-gradient(top,  #191919 0%,#131313 100%) /* Chrome10+,Safari5.1+ */
+	//background: -o-linear-gradient(top,  #191919 0%,#131313 100%) /* Opera 11.10+ */
+	//background: -ms-linear-gradient(top,  #191919 0%,#131313 100%) /* IE10+ */
+	//background: linear-gradient(to bottom,  #191919 0%,#131313 100%) /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#131313',GradientType=0 ) /* IE6-9 */
 	
 	.container-fluid
 		//@extend .grid
 		+container
+		max-width : $max-width
 		.row-fluid
-			+padding-leader(3)
+			+padding-leader(2)
 			.span3
 				//+leader(1)
 				+trailer(1)
@@ -391,12 +434,21 @@ body
 					+span-columns(8,9)
 					height : $base-line-height * 2
 					margin : 0px
-					+trailer(0.5)
+					+trailer(1)
 					img
 						margin-top : -2px
 						width : 90%
+#nav
+	background-color : rgb(20, 14, 20)
+	box-sizing: border-box
+	width: 100%
+	overflow: auto
+	.container-fluid
+		+container
+		max-width : $max-width
 		.row-fluid
 			nav
+				//display : none
 				//+leader(1)
 				//margin-left : -40px
 				.nav-bar
@@ -409,8 +461,8 @@ body
 							a
 								color : #ffffff //#fafafa
 								border-radius : 2px 2px 0px 0px
-								border-color : rgb(20, 14, 20)
-								border-width : 1px 1px 0px 1px
+								border-color : #333333
+								border-width : 2px 0px 0px 0px
 								border-style : solid
 								//border-color : rgb(20, 14, 20)
 								//+leader(2/3)
@@ -436,21 +488,21 @@ body
 									border-color : rgb(20, 14, 20)
 									color : #ffffff
 									text-shadow : none
-									background-color : #8569A3 //#6F5585 //#864896
+									background-color : #614580 //#6F5585 //#864896
 						li.active
 							a
 								//border : none
 								border-radius : 2px 2px 0px 0px
 								text-shadow : none
-								background-color : #8569A3 //rgb(91, 61, 92)
-								color : #ffffff
-								border-width : 1px 1px 0px 1px
+								background-color : #ffffff //#614580 //rgb(91, 61, 92)
+								color : #222222
+								border-width : 2px 0px 0px 0px
 								border-style : solid
 								border-color : rgb(20, 14, 20)
 		max-width : $max-width
 #footer
-	height : 2 * $base-line-height
-	//background-color : #eeeeee //rgb(91, 61, 92) //#8152A3 //#2A1F33
+	height : 5 * $base-line-height
+	background-color : #eeeeee //rgb(91, 61, 92) //#8152A3 //#2A1F33
 	nav
 		+span-columns(24,30)
 		+pre(3,30)

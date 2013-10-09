@@ -2,9 +2,9 @@
 	"brands" : [
 		
 		{
-			"title" : "Suck Uk",
+			"title" : "Suck UK",
 			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
-			"image_file_name" : "pencil_sharpener2"
+			"image_file_name" : "suckuk"
 		},
 		{
 			"title" : "Fikay Eco",
@@ -14,12 +14,47 @@
 		{
 			"title" : "Ancient Wisdom",
 			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
-			"image_file_name" : "freedom"
+			"image_file_name" : "ancientwisdom"
 		},
 		{
 			"title" : "Ottoman Scent",
 			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
-			"image_file_name" : "fruit"
+			"image_file_name" : "ottomanscent"
+		},
+		{
+			"title" : "Fred",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "fred"
+		},
+		{
+			"title" : "Gift Republic",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "giftrepublic"
+		},
+		{
+			"title" : "Thabto",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "thabto"
+		},
+		{
+			"title" : "WeWood",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "wewood"
+		},
+		{
+			"title" : "Stone the Crows",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "stonethecrows"
+		},
+		{
+			"title" : "Sass and Belle",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "sassandbelle"
+		},
+		{
+			"title" : "Luckies",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eget arcu sagittis, eget auctor odio ornare. Proin in interdum nulla. Fusce mollis posuere auctor. Aenean lacinia consequat nunc, vel cursus nisl vulputate et.",
+			"image_file_name" : "luckiesoflondon"
 		}
 	]
 }

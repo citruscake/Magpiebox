@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+   <modules>
+      <Magpiebox_ProductList>
+         <version>1.0.1</version>
+      </Magpiebox_ProductList>
+   </modules>
+   <global>
+      <models>
+         <ProductList>
+             <class>Magpiebox_ProductList_Model</class>
+         </ProductList>
+      </models>
+   </global>
+</config>

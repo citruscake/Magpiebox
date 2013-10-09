@@ -1,0 +1,13 @@
+	<?php /*$categories = array('you', 'me', 'it');*/ sort($categories); var_dump($categories);?>
+	<?php foreach($categories as $category) {
+		echo $category;
+	}	?>
+
+	<?php $categoryNames = array(); 
+	var_dump($this->getStoreCategories()); ?>
+
+<?php echo $this->drawItem($_category); ?>
+
+	<?php foreach ($this->getStoreCategories() as $_category): ?>
+		<?php var_dump($_category); ?>
+	<?php endforeach ?>
