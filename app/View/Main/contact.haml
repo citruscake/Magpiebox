@@ -6,8 +6,23 @@
 					Get in touch with us.
 	.row-fluid
 		.span10
+			%h3
+				%span
+					General enquiries : 
+				info@magpiebox.com
+				%br
+				%span
+					Business enquiries : 
+				management@magpiebox.com
+				%br
+				%span
+					Telephone : 
+				01789 415232
+				%br
+				%br
+		.span10
 			%p
-				Please use the contact form to send us an email, or alternatively email us directly at info@magpiebox.com.
+				Alternatively you can use the form below to send us a message directly.
 	:plain
 		<?php
 			echo $this->Form->create("Contact_us", array("id" => "Contact_us", "role" => "form", "url" => array("controller" => "main", "action" => "contact"), 'class'=>'form-horizontal')); 
@@ -27,7 +42,7 @@
 									:name => "email_address",
 									:id => "email_address",
 									:placeholder => "Email"}
-		#contact_email_symbol_container
+								#contact_email_symbol_container
 	.row-fluid.form-row
 		.span10
 			.control-group
@@ -86,7 +101,7 @@
 				%em
 					Success!
 				Thank you for your message, I'll be in contact soon.
-			.alert.alert-error
+			.alert.alert-danger
 				%em
 					Error!
-				The message could not be sent. You can try contacting me at efblundell[at]hotmail.co.uk instead.
+				The message could not be sent. You can try contacting us at management@magpiebox.co.uk instead.

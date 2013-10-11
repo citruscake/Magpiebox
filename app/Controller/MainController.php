@@ -40,7 +40,7 @@ class MainController extends AppController {
 	}
 	
 	public function home() {
-
+		$this->pageTitle = "Magpiebox";
 	}
 
 	public function brands() {
@@ -62,12 +62,15 @@ class MainController extends AppController {
 
 public function contact() {
 
-	$this->layout = 'main';
-	
+	$this->pageTitle = "Contact us";
+
 	if($this->request->is('post')) {
 	
+		$this->layout = "ajax";
+		$this->autoRender = false;
+
 		$message_subject = $this->request['data']['message_subject'];
-		$reply_email_address = $this->request['data']['contact_email_address'];
+		$reply_email_address = $this->request['data']['email_address'];
 		$message_body = $this->request['data']['message_body'];
 		$message_subject = $this->request['data']['message_subject']." [via Magpiebox.com]";
 		$sender_name = $this->request['data']['full_name'];
@@ -75,13 +78,14 @@ public function contact() {
 		$headers = 'From: '.$reply_email_address;
 
 		if(mail("management@magpiebox.com", $message_subject, $message_body, $headers)) {
-			//echo "success";
+			echo "{ \"status\" : \"success\" }";
 		}
 		else {
-			//echo "fail";
+			echo "{ \"status\" : \"failure\" }";
 		}
 	}
 	else {
+		$this->layout = 'main';
 		//load the form as usual
 	}
 }
@@ -109,6 +113,7 @@ public function blog() {
 }
 
 public function find_us() {
+	$this->pageTitle = "Visit us";
 	$this->layout = 'main';
 }
 

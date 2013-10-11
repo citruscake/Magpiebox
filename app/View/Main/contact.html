@@ -10,8 +10,28 @@
   </div>
   <div class='row-fluid'>
     <div class='span10'>
+      <h3>
+        <span>
+          General enquiries :
+        </span>
+        info@magpiebox.com
+        <br>
+        <span>
+          Business enquiries :
+        </span>
+        management@magpiebox.com
+        <br>
+        <span>
+          Telephone :
+        </span>
+        01789 415232
+        <br>
+        <br>
+      </h3>
+    </div>
+    <div class='span10'>
       <p>
-        Please use the contact form to send us an email, or alternatively email us directly at info@magpiebox.com.
+        Alternatively you can use the form below to send us a message directly.
       </p>
     </div>
   </div>
@@ -31,13 +51,13 @@
             <div class='controls'>
               <div id='email_address_container'>
                 <input id='email_address' name='email_address' placeholder='Email' type='text'>
+                <div id='contact_email_symbol_container'></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id='contact_email_symbol_container'></div>
   </div>
   <div class='row-fluid form-row'>
     <div class='span10'>
@@ -119,11 +139,11 @@
         </em>
         Thank you for your message, I'll be in contact soon.
       </div>
-      <div class='alert alert-error'>
+      <div class='alert alert-danger'>
         <em>
           Error!
         </em>
-        The message could not be sent. You can try contacting me at efblundell[at]hotmail.co.uk instead.
+        The message could not be sent. You can try contacting us at management@magpiebox.co.uk instead.
       </div>
     </div>
   </div>

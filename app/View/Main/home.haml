@@ -3,13 +3,10 @@
 		%header
 			%h1
 				Welcome to Magpiebox.
-	.row-fluid
+	.row-fluid.clearfix
 		#intro_container
 			.row-fluid
-				%p
-					Magpiebox is a new gift shop located in the heard of Startford-upon-Avon. We work hard to find new and exciting stock
-					that we have never seen before.
-				%p{:id => "gift_list"}
+				%p{:id => "gift_list", :style => "display:none;"}
 					%span{:class=>"glyphicon glyphicon-star"}
 					&nbspGifts
 					%span{:class=>"glyphicon glyphicon-star", :style=>"margin-left:53px;"}
@@ -23,9 +20,26 @@
 					&nbspSatchels
 					%span{:class=>"glyphicon glyphicon-star", :style=>"margin-left:50px;"}
 					&nbspKitchenware
+				#main_image_container
+					.row-fluid
+						%img{:src => "/img/shop/shop_large_1.jpg", :style=>"position:relative"}
 				%p
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut rhoncus lacus, sit amet venenatis arcu. Duis vulputate bibendum neque, nec ullamcorper est varius at. Suspendisse potenti. In venenatis in nulla at sodales. Donec adipiscing fringilla ante nec scelerisque. Nullam vel tellus eget sapien consectetur suscipit. 
+					We are brand new gift shop located in the heart of Stratford, on Henley Street. We believe in finding new and exciting products that make great gifts for others or an unusual treat for yourself.
 					%br
 					%br
-		#main_image_container
-			%img{:src => "/img/shop_front_1.jpg", :style=>"position:relative"}
+					We are a family run business and are really passionate in what our brand is and represents. All of our cosmetics are made from 100% natural ingredients and nothing is tested on animals. Also, none of our bags or satchels are made from leather, but from high quality materials that achieve the look you want without being unkind to animals. 
+					%br
+					%br
+					At Magpiebox we work hard to find new stock and keep the shop fresh and interesting for you every time you visit. We love getting deliveries of products we have not sold before and are always excited to put them on our shelves. We have one item from each range out on the shelves so you can see what it’s like and decide for yourself if it’s for you. 
+					%br
+					%br
+					We wanted to stock products that we would love to open on Christmas day, and we do indeed only stock products which we ourselves love. A staff member usually buys something from our stock most days, it’s hard to resist!
+					%br
+					%br
+	.row-fluid
+		.instragram-image-1
+			%img{:src => "/img/shop/shop_instragram_1.jpg", :style=>"position:relative"}
+		.instragram-image-2
+			%img{:src => "/img/shop/shop_instragram_2.jpg", :style=>"position:relative"}
+		.instragram-image-3
+			%img{:src => "/img/shop/shop_instragram_4.jpg", :style=>"position:relative"}

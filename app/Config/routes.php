@@ -40,7 +40,10 @@
 
 	//}
 	//else {
-		Router::connect('/', array('controller' => 'main', 'action' => 'index'));
+		Router::connect('/visit_us', array('controller' => 'main', 'action' => 'find_us'));
+		Router::connect('/contact_us', array('controller' => 'main', 'action' => 'contact'));
+		Router::connect('/home', array('controller' => 'main', 'action' => 'home'));
+		Router::connect('/', array('controller' => 'main', 'action' => 'home'));
 		Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	//}
 /**

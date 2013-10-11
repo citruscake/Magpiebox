@@ -126,7 +126,9 @@
     <?php endif; ?>
 
     <div class="toolbar-bottom">
-        <?php echo $this->getToolbarHtml() ?>
+        <?php //echo $this->getToolbarHtml() 
+			echo $this->getToolbarBlock()->setTemplate('catalog/product/list/toolbar_bottom.phtml')->toHtml();
+		?>
     </div>
 </div>
 <?php endif; ?>

@@ -1,7 +1,7 @@
 <h2>Brands</h2>
 <div class="block">
 <ul id="nav_category" class="nav nav-pills nav-stacked"> <?php /* had class nav_category */ ?>
-	<?php echo "<li><a href=\"/magento/store\">All Products</a></li>"; ?>
+	<?php echo "<li><a href=\"/magento/index.php/store\">All Products</a></li>"; ?>
 	<?php foreach ($this->getStoreCategories() as $_category): ?>
 		<?php echo $this->drawItem($_category) ?>
 	<?php endforeach ?>

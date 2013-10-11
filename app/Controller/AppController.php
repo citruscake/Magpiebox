@@ -34,11 +34,12 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 	var $pages;
+	var $pageTitle;
 
 	public function beforeFilter() {
 		$pages = array(
 			array(
-				'url' => '/main/home',
+				'url' => '/home',
 				'action' => 'home',
 				'title' => 'Welcome'
 			),
@@ -48,15 +49,15 @@ class AppController extends Controller {
 				'title' => 'Products'
 			),*/
 			array(
-				'url' => '/main/find_us',
-				'action' => 'find_us',
-				'title' => 'Find us'
+				'url' => '/visit_us',
+				'action' => 'visit_us',
+				'title' => 'Visit us'
 			),
-			array(
+			/*array(
 				'url' => '/main/brands',
 				'action' => 'brands',
 				'title' => 'Brands'
-			),
+			),*/
 			/*array(
 				'url' => '/main/meet_the_team',
 				'action' => 'meet_the_team',
@@ -68,8 +69,8 @@ class AppController extends Controller {
 				'title' => 'Blog'
 			),*/
 			array(
-				'url' => '/main/contact',
-				'action' => 'contact',
+				'url' => '/contact_us',
+				'action' => 'contact_us',
 				'title' => 'Contact us'
 			)
 		);
@@ -83,5 +84,9 @@ class AppController extends Controller {
 		else {
 			return "undefined error";
 		}
+	}
+	
+	public function beforeRender() {
+		$this->set('title_for_layout', $this->pageTitle);
 	}
 }
