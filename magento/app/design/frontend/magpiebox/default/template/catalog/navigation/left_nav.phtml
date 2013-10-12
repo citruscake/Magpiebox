@@ -1,6 +1,13 @@
 <div class="block">
 <ul id="nav_category" class="nav nav-pills nav-stacked"> <?php /* had class nav_category */ ?>
-	<?php echo "<li><a href=\"/magento/index.php/store\">All Products</a></li>"; ?>
+	<?php $cmsPageUrlKey = Mage::getSingleton('cms/page')->getIdentifier(); 
+		if($cmsPageUrlKey == "store") {
+			echo "<li class=\"active\"><a href=\"/magento/index.php/store\">All Products</a></li>";
+		}
+		else {
+			echo "<li><a href=\"/magento/index.php/store\">All Products</a></li>";
+		}
+	?>
 	<?php foreach ($this->getStoreCategories() as $_category): ?>
 		<?php echo $this->drawItem($_category) ?>
 	<?php endforeach ?>

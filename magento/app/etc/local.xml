@@ -42,7 +42,7 @@
         <connection>
           <host><![CDATA[localhost]]></host>
           <username>root</username>
-          <password></password>
+          <password>password</password>
           <dbname>mbox_magento</dbname>
           <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
           <model><![CDATA[mysql4]]></model>

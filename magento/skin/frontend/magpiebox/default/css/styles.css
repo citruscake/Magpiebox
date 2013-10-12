@@ -35,6 +35,28 @@
 	text-decoration : underline;
  }
  
+ .pages {
+	width:100%;
+	text-align:center;
+	margin-left:-7%;
+	margin-bottom:1.5em;
+ }
+ 
+ #social_media_magpiebox {
+	width:100%;
+	text-align:center;
+	margin-top:2em;
+ }
+ 
+  #social_media_magpiebox #twitter_frame{
+	display:inline;
+  }
+  
+  #social_media_magpiebox #facebook_frame {
+	display:inline;
+	margin-right:6px;
+  }
+ 
  #magpiebox_logo {
 	width : 268px;
 	margin-top : 72px;
@@ -117,34 +139,34 @@
 
 #home_container {
   width: 100%;
+  margin-top:1em;
   float: left;
   margin-right: 0.96154%;
-  display: inline;
   border-radius: 2px;
   float: right;
   margin-right: 0;
   *margin-left: -10px;
   display: inline;
+  padding-bottom:1em;
 }
-#home_container .row-fluid .header {
+#home_container .row-fluid {
   width: 100%;
   float: left;
   margin-right: 2.43902%;
   display: inline;
-  margin-top: 1.5em;
 }
-#home_container .row-fluid .header h1 {
+#home_container .row-fluid h1 {
   font-size: 2em;
   line-height: 1.5em;
   float : left;
 }
 #home_container .row-fluid #intro_container {
   overflow: hidden;
-  margin-top: 1.5em;
   width: 100%;
   float: left;
   margin-right: 0.96154%;
   display: inline;
+  margin-top:1em;
 }
 #home_container .row-fluid #intro_container .row-fluid {
   overflow: auto;
@@ -203,6 +225,184 @@
 }
 #home_container .row-fluid .instragram-image-1, #home_container .row-fluid .instragram-image-2 {
   margin-right: 0.96154%;
+}
+
+#find_us_container {
+  padding-top: 1.5em;
+  border-radius: 2px;
+  overflow: auto;
+  margin-bottom: 1.5em;
+}
+#find_us_container .row-fluid h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+#find_us_container .row-fluid .span2 {
+  width: 22.59615%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  margin-right: 3.36538%;
+}
+#find_us_container .row-fluid .span2 .row-fluid p {
+  margin-bottom: 1.5em;
+}
+#find_us_container .row-fluid .span2 .row-fluid p span {
+  font-weight: bold;
+}
+#find_us_container .row-fluid .span2 .row-fluid #google_map_container {
+  margin-top: 3em;
+}
+#find_us_container .row-fluid .span8 {
+  width: 73.07692%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  *margin-left: -10px;
+  display: inline;
+}
+#find_us_container .row-fluid .span8 .row-fluid #google_map_container {
+  width: 100%;
+  float: left;
+  margin-right: 1.31579%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  *margin-left: -10px;
+  display: inline;
+}
+#find_us_container .row-fluid .span8 .row-fluid #google_map_container iframe {
+  border-width: 10px;
+  border-color: #111111;
+  box-sizing: border-box;
+  border-style: solid;
+}
+#find_us_container .row-fluid .span8 .row-fluid #google_map_container small a {
+  color: #111111;
+}
+
+
+#contact_container {
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+#contact_container .row-fluid {
+  overflow: auto;
+}
+#contact_container .row-fluid h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+#contact_container .row-fluid .span10 p {
+  margin-bottom: 1.5em;
+}
+#contact_container .row-fluid .span10 h3 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+#contact_container .row-fluid .span10 h3 span {
+  font-weight: bold;
+}
+#contact_container .form-row {
+  margin-bottom: 0.75em;
+}
+#contact_container .form-row .alert {
+  width: 46.15385%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  margin-left: 6.73077%;
+  display: none;
+}
+#contact_container .form-row .alert-success {
+  background-color: transparent;
+  color: #468847;
+}
+#contact_container .form-row .alert-danger {
+  background-color: transparent;
+  color: #b94a48;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .left-frame {
+  width: 5.76923%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  width: 66px;
+  line-height: 2.25em;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .left-frame label {
+  margin-top: -2px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame {
+  width: 49.51923%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  width: 525px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame input, #contact_container .form-row .span10 .control-group .row-fluid .right-frame textarea {
+  background-color: transparent;
+  border-color: #999999;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame input:focus, #contact_container .form-row .span10 .control-group .row-fluid .right-frame textarea:focus {
+  outline: none;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #email_address_container input, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #full_name_container input {
+  width: 298px;
+  line-height: 2.25em;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 1px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_subject_container input, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_body_container input {
+  margin-bottom: 1px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_subject_container input, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_subject_container textarea, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_body_container input, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_body_container textarea {
+  width: 529px;
+  line-height: 2.25em;
+  box-sizing: border-box;
+  padding: 4px 10px 4px 10px;
+}
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_subject_container textarea, #contact_container .form-row .span10 .control-group .row-fluid .right-frame #message_body_container textarea {
+  resize: vertical;
+  height: 126px;
+}
+
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #contact_email_symbol_container {
+	display:inline;
+}
+
+#contact_container .form-row .span10 .control-group .row-fluid .right-frame #contact_email_symbol_container span {
+  margin-top: 10px;
+}
+
+#contact_container .form-row .span10 #submit_contact_us_container #submit_contact_us_button button {
+  border-radius: 2px;
+  background-color: #7d53d6;
+  width: 12.5%;
+  float: left;
+  margin-right: 0.96154%;
+  display: inline;
+  width: 143px;
+  margin-left: 462px;
+  line-height: 2.25em;
+  border-color: #999999;
+  border-width: 1px;
+  border-style: solid;
+  color: white;
+  -moz-transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+#contact_container .form-row .span10 #submit_contact_us_container #submit_contact_us_button button:hover {
+  background-color: #9269e6;
 }
 
 #search_form_magpiebox .search_label {
@@ -594,7 +794,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .pager .limiter { float:right; margin-right:5px; width:172px;}
 .pager .limiter label { vertical-align:middle; display:inline; float:left; margin-right:6px; margin-top:4px; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 140px; }
+.pager .pages { }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
@@ -613,7 +813,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Toolbar */
 .toolbar {}
-.toolbar .pager { border-bottom:3px solid #eee; margin-bottom: 20px;}
+.toolbar .pager { border-bottom:3px solid #ddd; margin-bottom: 20px;}
 .toolbar .sorter { border-bottom:1px solid #fff; }
 .toolbar-bottom {}
 
@@ -1041,7 +1241,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid.last { border-bottom:0; }
 .products-grid li.item { float:left; width:25%; margin-right:5%; padding-left:10px;}
 .products-grid .product-image { display:block; width:100%; margin:0 0 10px; }
-.products-grid .product-image img { max-width:100%; border-width: 1px; border-style: solid; border-color: #ECECEC; border-radius: 3px;}
+.products-grid .product-image img { max-width:100%; border-width: 1px; border-style: solid; border-color: #dddddd; border-radius: 3px;}
 .products-grid .product-name { /*min-height:2.7em;*/ font-weight:bold; font-size:13px; color:#203548; margin-left:4px; }
 .products-grid .product-name a { color:#203548; font-size:21px; font-weight:normal;}
 .products-grid .price-box { margin:5px 0; }
