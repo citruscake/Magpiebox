@@ -1,0 +1,86 @@
+#contact_container
+	.row-fluid
+		%header
+			%h1
+				Get in touch
+			:plain
+				<?php
+					echo $this->Form->create("Contact_us", array("id" => "Contact_us", "url" => array("controller" => "main", "action" => "contact"), 'class'=>'form-horizontal')); 
+				?>
+	.row-fluid.form-row
+		.span8
+			.control-group
+				.row-fluid
+					.left-frame
+						%label{:for => "email_address",
+							:class => "control-label"}
+							Email:
+					.right-frame
+						.controls
+							#contact_email_container
+								%input{:type => "text",
+									:name => "email_address",
+									:id => "contact_email_address",
+									:placeholder => "Email address"}
+						#contact_email_symbol_container
+	.row-fluid.form-row
+		.span10
+			.control-group
+				.row-fluid
+					.left-frame
+						%label{:for => "full_name",
+							:class => "control-label"}
+							Name:
+					.right-frame
+						.controls
+							#full_name_container
+								%input{:type => "text",
+									:name => "full_name",
+									:id => "full_name",
+									:placeholder => "Name"}
+	.row-fluid.form-row
+		.span10
+			.control-group
+				.row-fluid
+					.left-frame
+						%label{:for => "message_subject",
+							:class => "control-label"}
+							Subject:
+					.right-frame
+						.controls
+							#message_subject_container
+								%input{:type => "text",
+									:name => "message_subject",
+									:id => "message_subject",
+									:placeholder => "Subject"}
+	.row-fluid.form-row
+		.span10
+			.control-group
+				.row-fluid
+					.left-frame
+						%label{:for => "message_body",
+								:class => "control-label"}
+							Message:
+					.right-frame
+						.controls
+							#message_body_container
+								%textarea{:rows => "5",
+									:name => "message_body",
+									:id => "message_body",
+									:placeholder => "Message"}
+	.row-fluid.form-row
+		.span10
+			#submit_contact_us_container
+				#submit_contact_us_button
+					Send
+					%i{:class => "icon-envelope icon-white"}
+	.row-fluid.form-row
+		.span10
+			.alert.alert-success
+				%em
+					Success!
+				Thank you for your message, I'll be in contact soon.
+			.alert.alert-error
+				%em
+					Error!
+				The message could not be sent. You can try contacting me at efblundell[at]hotmail.co.uk instead.

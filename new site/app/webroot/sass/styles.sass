@@ -1,0 +1,268 @@
+$header_bg : rgba(151, 151, 151, 0.2) //rgba(151, 50, 50, 0.2)
+$max-width : 80%
+
+@import "compass"
+@import "compass/reset"
+
+@import "susy-defaults"
+@import "susy"
+
+// My Override mixin
+@mixin susy-grid-background
+	+grid-background($total-columns, $column-width, $gutter-width, $base-line-height, $side-gutter-width, $force-fluid: true)
+
+// establish your vertical baseline grid.
++establish-baseline
+
+// extend this class to show your grid.
+.grid
+	+susy-grid-background
+
+.row-fluid
+	min-height : 0px
+	@for $i from 1 through 10
+		.span#{$i}
+			+span-columns($i*3,$total-columns)
+	.span11, .span12
+		width : 0px
+
+#content
+	+padding-trailer(1)
+	background-color : #362C3D
+	.container-fluid
+		+padding-trailer(2)
+		border-radius : 0px 0px 2px 2px
+		//background-color : #eeeeee
+		+padding-leader(2)
+		//@extend .grid
+		// calling susy's container mixin will apply the grid to that element.
+		+container
+		max-width : $max-width
+		#contact_container
+			
+		
+		
+		#find_us_container
+			+padding-leader(1)
+			border-radius : 2px
+			background-color : #fafafa
+			overflow : auto
+			+trailer(1)
+			.row-fluid
+				.span6
+					+span-columns(16,30)
+					+pre(1,30)
+					+post(1,30)
+					.row-fluid
+						header
+							h1
+								+adjust-font-size-to(1.5 * $base-font-size)
+							+trailer(1)
+						p
+							+trailer(1)
+						#google_map_container
+							+leader(2)
+				.span4
+					+span-columns(11,30)
+					.row-fluid
+						#find_us_block1, #find_us_block2
+							height : $base-line-height * 10
+							+span-columns(11,11)
+							background-color : #dddddd
+						#find_us_block1
+							+leader(3)
+						#find_us_block2
+							+leader(1)
+		#blog_container
+			+trailer(1)
+			.row-fluid
+				.span10
+					display : none
+					header
+						h1
+							+pre(2,30)
+							+adjust-font-size-to(1.5 * $base-font-size)
+						+leader
+				.span8
+					+span-columns(20,30)
+					//+pre(1,30)
+					+post(1,30)
+					margin-right : 0px
+					article
+						+trailer(1)
+						border-radius : 2px
+						//+leader(1)
+						overflow : auto
+						.row-fluid
+							.blog-header
+								border-radius : 2px 2px 0px 0px
+								overflow : auto
+								background-color : #fafafa
+								.row-fluid
+									overflow : auto
+									.title-container
+										+leader(1)
+										overflow : auto
+										h1
+											+adjust-font-size-to(1.5 * $base-font-size)
+											+pre(1,20)
+											+span-columns(18,20)
+											+post(1,20)
+									.date-container
+										overflow : auto
+										+pre(1,20)
+										+span-columns(18,20)
+										+post(1,20)
+										//+trailer(1.25)
+										height : $base-line-height
+										time, .name
+											display : inline
+											+adjust-font-size-to($base-font-size)
+										time
+											color : #333333
+										.name
+											color : #555555
+							#divider
+								+trailing-border(2px, 1, $base-font-size)
+								border-color : #eeeeee
+								border-style : solid
+							.blog-body
+								border-radius : 0px 0px 2px 2px
+								.row-fluid
+									.body-container
+										background-color : #fafafa
+										+span-columns(20,20)
+										+omega
+										+padding-trailer(1)
+										+padding-leader(1)
+										span
+											+trailer(1)
+											+span-columns(18,20)
+											+pre(1,20)
+											+post(1,20)
+											+adjust-font-size-to($base-font-size)
+										img
+											//max-width : 100%
+											+span-columns(18,20)
+											+pre(1,20)
+				.span2
+					+span-columns(8,30)
+					+post(1,30)
+					+pre(1,30)
+					//background-color : #cccccc
+					margin-right : 0px
+					header
+						h1
+							color : #999999
+							margin-left : 1px
+							+adjust-font-size-to(1 * $base-font-size)
+					nav
+						ul
+							li
+								cursor : pointer
+								text-align : center
+								-moz-transition : background-color 0.3s linear
+								-webkit-transition : background-color 0.3s linear
+								transition : background-color 0.3s linear
+								padding : 1em
+								&:hover
+									background-color : #eeeeee
+		
+		.row-fluid
+			.ad-block-1
+				+pre(1,30)
+				+span-columns(28,30)
+				border-radius : 2px 2px 0px 0px
+				height : 10 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+				
+			.ad-block-2
+				+leader(1.5)
+				+span-columns(11,30)
+				border-radius : 2px 2px 0px 0px
+				+pre(1,30)
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+			.ad-block-3
+				+leader(1.5)
+				+pre(1,30)
+				+span-columns(11,30)
+				border-radius : 2px 2px 0px 0px
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+			.ad-block-4
+				+leader(1.5)
+				+pre(1,30)
+				+span-columns(17,30)
+				border-radius : 2px 2px 0px 0px
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+body
+	font-family : Bitter
+	background-color : #eeeeee
+	
+#header
+	background-color : #222222
+	.container-fluid
+		//@extend .grid
+		+container
+		.row-fluid
+			+padding-leader(2)
+			.span3
+				+trailer(1)
+				#logo_frame
+					+padding-leader(0.5)
+					+span-columns(8,9)
+					height : $base-line-height * 2
+					margin : 0px
+					+trailer(0.5)
+					img
+						width : 100%
+		.row-fluid
+			nav
+				.nav-bar
+					.nav-tabs
+						border : none
+						li
+							margin : 0px
+							+span-columns(4,30)
+							text-align : center
+							a
+								color : #ffffff
+								border-radius : 2px 2px 0px 0px
+								border-color : 1px solid #4E4E4E
+								//+leader(2/3)
+								margin-top : 0.7em
+								padding-top : 0.75em //0.3em
+								padding-bottom : 0.75em //0.3em
+								cursor : pointer
+								line-height : $base-line-height
+								background-color : #4A6566 //#2E7C7C//#3d3d3d //#2E7C7C //#3d3d3d //#2a2a2a
+								border : none
+								-webkit-transition-property: background
+								-webkit-transition-duration: 0.1s
+								-webkit-transition-timing-function: ease
+								-moz-transition-property: background
+								-moz-transition-duration: 0.1s
+								-moz-transition-timing-function: ease
+								transition-property: background
+								transition-duration: 0.1s
+								transition-timing-function: ease
+								&:hover
+									border : none
+									color : #333333
+									background-color : #eeeeee //#864896
+						li.active
+							a
+								border : none
+								border-radius : 2px 2px 0px 0px
+								background-color : #eeeeee
+								color : #333333
+		max-width : $max-width
+#footer
+	height : 6 * $base-line-height
+	background-color : #241E29

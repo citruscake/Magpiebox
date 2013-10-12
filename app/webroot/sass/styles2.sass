@@ -1,0 +1,250 @@
+$header_bg : rgba(151, 151, 151, 0.2) //rgba(151, 50, 50, 0.2)
+$max-width : 1200px
+$min-width : 500px
+
+@import "compass"
+@import "compass/reset"
+
+@import "susy-defaults"
+@import "susy"
+
+// My Override mixin
+@mixin susy-grid-background
+	+grid-background($total-columns, $column-width, $gutter-width, $base-line-height, $side-gutter-width, $force-fluid: true)
+
+// establish your vertical baseline grid.
++establish-baseline
+
+// extend this class to show your grid.
+.grid
+	+susy-grid-background
+
+.row-fluid
+	min-height : 0px
+	@for $i from 1 through 10
+		.span#{$i}
+			+span-columns($i*3,$total-columns)
+	.span11, .span12
+		width : 0px
+
+=button_gradient
+	background: #ffffff /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ) /* IE6-9 */
+		
+#content
+	+padding-trailer(1)
+	+padding-leader(1)
+	background-color : #ffffff //#8569A3 //rgb(91, 61, 92) //rgb(91, 61, 92) //#fcfcfc
+	//background-color : #533E63 //#dddddd //#362C3D
+	.container-fluid
+		//+padding-trailer(1)
+		border-radius : 0px 0px 2px 2px
+		//background-color : #fafafa //#eeeeee
+		//+padding-leader(2)
+		//@extend .grid
+		// calling susy's container mixin will apply the grid to that element.
+		+container
+		max-width : $max-width
+		min-width : $min-width
+		width : 85%
+		#products_container
+			.row-fluid
+				.span2
+					nav
+						ul
+							background-color : #eeeeee
+							li
+								a
+									color : #333333
+		
+		
+		
+#home_container
+	//+padding-leader(1)
+	+span-columns(30,30)
+	border-radius : 2px
+	+omega
+	.row-fluid
+		header
+			+span-columns(12,12)
+			+leader(1)
+			h1
+				+adjust-font-size-to(2 * $base-font-size)
+		#intro_container
+			overflow : hidden
+			+leader(1)
+			+span-columns(30,30)
+			//background-color : #eeeeee
+			//+pre(1,30)
+			.row-fluid
+				overflow : auto
+				p
+					#gift_list
+						+adjust-font-size-to(1 * $base-font-size)
+						+leader(1)
+						.glyphicon
+							color : #222222
+						span
+							margin-top : -2px
+						#main_image_container
+							+leader(1)
+							float : right
+		#main_image_container, #main_image_container-2
+			+span-columns(18,30)
+			+omega
+			+pre(1,30)
+			+trailer(1)
+			//background-color : #cccccc
+			img
+				+span-columns(17,17)
+				+omega
+				border-width: 15px
+				border-color : #111111 //#FFECDF
+				box-sizing : border-box
+				border-style : solid
+		#main_image_container-2
+			img
+				display : none
+		.instragram-image-1, .instragram-image-2, .instragram-image-3
+			display : inline
+			float : left
+			img
+				width : 100%
+			width : 32.6923066667%
+		.instragram-image-1, .instragram-image-2
+			margin-right : 0.96154%
+
+#find_us_container
+	+padding-leader(1)
+	border-radius : 2px
+	//background-color : #fafafa
+	overflow : auto
+	+trailer(1)
+	.row-fluid
+		header
+			h1
+				+adjust-font-size-to(2 * $base-font-size)
+				+trailer(0.5)
+		.span2
+			+span-columns(7,30)
+			//+pre(1,30)
+			+post(1,30)
+			.row-fluid
+				p
+					+trailer(1)
+					span
+						font-weight : bold
+				#google_map_container
+					+leader(2)
+		.span8
+			+span-columns(22,30)
+			+omega
+			.row-fluid
+				#google_map_container
+					iframe
+						border-width : 10px
+						border-color : #111111
+						box-sizing: border-box
+						border-style : solid
+						//+leader(4.5)
+					+span-columns(22,22)
+					+omega
+					small
+						a
+							color : #111111			
+							
+#contact_container
+	+padding-leader(1)
+	+padding-trailer(2)
+	.row-fluid
+		overflow : auto
+		header
+			+trailer(1)
+			h1
+				+adjust-font-size-to(2 * $base-font-size)
+		.span10
+			p
+				+trailer(1)
+			h3
+				+adjust-font-size-to(1 * $base-font-size)
+				span
+					font-weight : bold
+	.form-row
+		+trailer(0.5)
+		//overflow : auto
+		.alert
+			+span-columns(14,30)
+			+pre(2,30)
+			display : none
+		.alert-success
+			background-color : transparent
+			color : #468847
+		.alert-danger
+			background-color : transparent
+			color : #b94a48
+		.span10
+			.control-group
+				.row-fluid
+					.left-frame
+						+span-columns(2,30)
+						width : 66px
+						+adjust-leading-to(1.5)
+						label
+							margin-top : -2px
+					.right-frame
+						+span-columns(15,30)
+						width : 525px
+						input, textarea
+							background-color : transparent
+							border-color : #999999
+							border-radius : 2px
+							border-style : solid
+							border-width : 1px
+							&:focus
+								outline : none
+						#email_address_container, #full_name_container
+							input
+								//+span-columns(8,15)
+								width : 298px
+								+adjust-leading-to(1.5)
+								padding : 4px 10px 4px 10px
+								margin-bottom : 1px
+						#message_subject_container, #message_body_container
+							input
+								margin-bottom : 1px
+							input, textarea
+								//+span-columns(14,15)
+								width : 529px
+								+adjust-leading-to(1.5)
+								box-sizing : border-box
+								padding : 4px 10px 4px 10px
+							textarea
+								resize : vertical
+								height : 6 * $base-line-height
+						#contact_email_symbol_container
+							span
+								margin-top : 10px
+			#submit_contact_us_container
+				#submit_contact_us_button
+					button
+						border-radius : 2px
+						background-color : #7D53D6 //#735788 //#ECECEC
+						+span-columns(4,30)
+						width : 143px
+						margin-left : 462px
+						+adjust-leading-to(1.5)
+						border-color : #999999
+						border-width : 1px
+						border-style : solid
+						color : #ffffff
+						-moz-transition : background-color 0.3s linear
+						-webkit-transition : background-color 0.3s linear
+						transition : background-color 0.3s linear
+						&:hover
+							background-color : #9269E6 //#9B66C2

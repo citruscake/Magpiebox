@@ -1,0 +1,645 @@
+$header_bg : rgba(151, 151, 151, 0.2) //rgba(151, 50, 50, 0.2)
+$max-width : 1200px
+$min-width : 500px
+
+@import "compass"
+@import "compass/reset"
+
+@import "susy-defaults"
+@import "susy"
+
+// My Override mixin
+@mixin susy-grid-background
+	+grid-background($total-columns, $column-width, $gutter-width, $base-line-height, $side-gutter-width, $force-fluid: true)
+
+// establish your vertical baseline grid.
++establish-baseline
+
+// extend this class to show your grid.
+.grid
+	+susy-grid-background
+
+.row-fluid
+	min-height : 0px
+	@for $i from 1 through 10
+		.span#{$i}
+			+span-columns($i*3,$total-columns)
+	.span11, .span12
+		width : 0px
+
+=button_gradient
+	background: #ffffff /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%) /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ) /* IE6-9 */
+		
+#content
+	+padding-trailer(1)
+	+padding-leader(1)
+	background-color : #ffffff //#8569A3 //rgb(91, 61, 92) //rgb(91, 61, 92) //#fcfcfc
+	//background-color : #533E63 //#dddddd //#362C3D
+	.container-fluid
+		//+padding-trailer(1)
+		border-radius : 0px 0px 2px 2px
+		//background-color : #fafafa //#eeeeee
+		//+padding-leader(2)
+		//@extend .grid
+		// calling susy's container mixin will apply the grid to that element.
+		+container
+		max-width : $max-width
+		min-width : $min-width
+		width : 85%
+		#products_container
+			.row-fluid
+				.span2
+					nav
+						ul
+							background-color : #eeeeee
+							li
+								a
+									color : #333333
+		
+		
+		
+		#home_container
+			//+padding-leader(1)
+			+span-columns(30,30)
+			border-radius : 2px
+			+omega
+			.row-fluid
+				header
+					+span-columns(12,12)
+					+leader(1)
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+				#intro_container
+					overflow : hidden
+					+leader(1)
+					+span-columns(30,30)
+					//background-color : #eeeeee
+					//+pre(1,30)
+					.row-fluid
+						overflow : auto
+						p
+							#gift_list
+								+adjust-font-size-to(1 * $base-font-size)
+								+leader(1)
+								.glyphicon
+									color : #222222
+								span
+									margin-top : -2px
+								#main_image_container
+									+leader(1)
+									float : right
+				#main_image_container, #main_image_container-2
+					+span-columns(18,30)
+					+omega
+					+pre(1,30)
+					+trailer(1)
+					//background-color : #cccccc
+					img
+						+span-columns(17,17)
+						+omega
+						border-width: 15px
+						border-color : #111111 //#FFECDF
+						box-sizing : border-box
+						border-style : solid
+				#main_image_container-2
+					img
+						display : none
+				.instragram-image-1, .instragram-image-2, .instragram-image-3
+					display : inline
+					float : left
+					img
+						width : 100%
+					width : 32.6923066667%
+				.instragram-image-1, .instragram-image-2
+					margin-right : 0.96154%
+		#meet_the_team_container
+			height : $base-line-height * 10
+			.row-fluid
+				.span10
+					img
+						+leader(1)
+						+trailer(1)
+			.row-fluid
+				header
+					+leader(1.5)
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+					+pre(1,30)
+					+span-columns(28,30)
+				p, img
+					+leader(1)
+					+pre(1,30)
+					+span-columns(28,30)
+		#contact_container
+			+padding-leader(1)
+			+padding-trailer(2)
+			.row-fluid
+				overflow : auto
+				header
+					+trailer(1)
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+				.span10
+					p
+						+trailer(1)
+					h3
+						+adjust-font-size-to(1 * $base-font-size)
+						span
+							font-weight : bold
+			.form-row
+				+trailer(0.5)
+				//overflow : auto
+				.alert
+					+span-columns(14,30)
+					+pre(2,30)
+					display : none
+				.alert-success
+					background-color : transparent
+					color : #468847
+				.alert-danger
+					background-color : transparent
+					color : #b94a48
+				.span10
+					.control-group
+						.row-fluid
+							.left-frame
+								+span-columns(2,30)
+								width : 66px
+								+adjust-leading-to(1.5)
+								label
+									margin-top : -2px
+							.right-frame
+								+span-columns(15,30)
+								width : 525px
+								input, textarea
+									background-color : transparent
+									border-color : #999999
+									border-radius : 2px
+									border-style : solid
+									border-width : 1px
+									&:focus
+										outline : none
+								#email_address_container, #full_name_container
+									input
+										//+span-columns(8,15)
+										width : 298px
+										display : inline
+										float : left
+										+adjust-leading-to(1.5)
+										padding : 4px 10px 4px 10px
+										margin-bottom : 1px
+								#message_subject_container, #message_body_container
+									input
+										margin-bottom : 1px
+									input, textarea
+										//+span-columns(14,15)
+										width : 529px
+										+adjust-leading-to(1.5)
+										box-sizing : border-box
+										padding : 4px 10px 4px 10px
+									textarea
+										resize : vertical
+										height : 6 * $base-line-height
+								#contact_email_symbol_container
+									width: 40px
+									margin-left: 10px
+									float: left
+									display: inline
+									span
+										margin-top : 10px
+										
+					#submit_contact_us_container
+						#submit_contact_us_button
+							button
+								border-radius : 2px
+								background-color : #7D53D6 //#735788 //#ECECEC
+								+span-columns(4,30)
+								width : 143px
+								margin-left : 462px
+								+adjust-leading-to(1.5)
+								border-color : #999999
+								border-width : 1px
+								border-style : solid
+								color : #ffffff
+								-moz-transition : background-color 0.3s linear
+								-webkit-transition : background-color 0.3s linear
+								transition : background-color 0.3s linear
+								&:hover
+									background-color : #9269E6 //#9B66C2
+		#brands_container
+			.row-fluid
+				header
+					display : none
+					+span-columns(28,30)
+					+leader(1)
+					//+pre(1,30)
+					+trailer(1)
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+				#brands_gallery
+					margin-left : auto
+					margin-right : auto
+					+trailer(1)
+					+span-columns(30,30)
+					.brand-frame
+						article
+							+span-columns(7,32)
+							+post(1,32)
+							.row-fluid
+								header
+									text-align : center
+									background-color : #fafafa
+									transition : background-color 0.3 ease
+									&:hover
+										background-color : #eeeeee
+										cursor : default
+									color : #222222
+									+span-columns(6,6)
+									border-style : solid
+									border-width : 1px
+									border-color : #dfdfdf
+									margin : 0em
+									box-sizing : border-box
+									padding : 0em 1em 0em 1em
+									min-height : 2 * $base-line-height
+									h1
+										//font-family : Emblema One
+										+adjust-font-size-to(1.5 * $base-font-size)
+										+adjust-leading-to(4/3)
+								.image-container
+									text-align : center
+									img
+										max-width : 100%
+										//+trailer(1)
+										+leader(1)
+										height : 6 * $base-line-height
+								content
+									p
+										//background-color : #eeeeee
+										margin-top : -6px
+										text-align : left
+										padding : 0em 0em 0em 1em
+										box-sizing: border-box
+										+trailer(2)
+							
+		#find_us_container
+			+padding-leader(1)
+			border-radius : 2px
+			//background-color : #fafafa
+			overflow : auto
+			+trailer(1)
+			.row-fluid
+				header
+					h1
+						+adjust-font-size-to(2 * $base-font-size)
+						+trailer(0.5)
+				.span2
+					+span-columns(7,30)
+					//+pre(1,30)
+					+post(1,30)
+					.row-fluid
+						p
+							+trailer(1)
+							span
+								font-weight : bold
+						#google_map_container
+							+leader(2)
+				.span8
+					+span-columns(22,30)
+					+omega
+					.row-fluid
+						#google_map_container
+							iframe
+								border-width : 10px
+								border-color : #111111
+								box-sizing: border-box
+								border-style : solid
+								//+leader(4.5)
+							+span-columns(22,22)
+							+omega
+							small
+								a
+									color : #111111
+		#blog_container
+			+trailer(1)
+			.row-fluid
+				.span10
+					display : none
+					header
+						h1
+							+pre(2,30)
+							+adjust-font-size-to(1.5 * $base-font-size)
+						+leader
+				.span8
+					+span-columns(20,30)
+					//+pre(1,30)
+					+post(1,30)
+					margin-right : 0px
+					article
+						+trailer(1)
+						border-radius : 2px
+						//+leader(1)
+						overflow : auto
+						.row-fluid
+							.blog-header
+								border-radius : 2px 2px 0px 0px
+								overflow : auto
+								background-color : #fafafa
+								.row-fluid
+									overflow : auto
+									.title-container
+										+leader(1)
+										overflow : auto
+										h1
+											+adjust-font-size-to(1.5 * $base-font-size)
+											+pre(1,20)
+											+span-columns(18,20)
+											+post(1,20)
+									.date-container
+										overflow : auto
+										+pre(1,20)
+										+span-columns(18,20)
+										+post(1,20)
+										//+trailer(1.25)
+										height : $base-line-height
+										time, .name
+											display : inline
+											+adjust-font-size-to($base-font-size)
+										time
+											color : #333333
+										.name
+											color : #555555
+							#divider
+								+trailing-border(2px, 1, $base-font-size)
+								border-color : #eeeeee
+								border-style : solid
+							.blog-body
+								border-radius : 0px 0px 2px 2px
+								.row-fluid
+									.body-container
+										background-color : #fafafa
+										+span-columns(20,20)
+										+omega
+										+padding-trailer(1)
+										+padding-leader(1)
+										span
+											+trailer(1)
+											+span-columns(18,20)
+											+pre(1,20)
+											+post(1,20)
+											+adjust-font-size-to($base-font-size)
+										img
+											//max-width : 100%
+											+span-columns(18,20)
+											+pre(1,20)
+				.span2
+					+span-columns(8,30)
+					+post(1,30)
+					+pre(1,30)
+					//background-color : #cccccc
+					margin-right : 0px
+					header
+						h1
+							color : #999999
+							margin-left : 1px
+							+adjust-font-size-to(1 * $base-font-size)
+					nav
+						ul
+							li
+								cursor : pointer
+								text-align : center
+								-moz-transition : background-color 0.3s linear
+								-webkit-transition : background-color 0.3s linear
+								transition : background-color 0.3s linear
+								padding : 1em
+								padding-bottom : 2em
+								&:hover
+									background-color : #eeeeee
+		
+		.row-fluid
+			.ad-block-1
+				+pre(1,30)
+				+span-columns(28,30)
+				border-radius : 2px 2px 0px 0px
+				height : 10 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+				
+			.ad-block-2
+				+leader(1.5)
+				+span-columns(11,30)
+				border-radius : 2px 2px 0px 0px
+				+pre(1,30)
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+			.ad-block-3
+				+leader(1.5)
+				+pre(1,30)
+				+span-columns(11,30)
+				border-radius : 2px 2px 0px 0px
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+			.ad-block-4
+				+leader(1.5)
+				+pre(1,30)
+				+span-columns(17,30)
+				border-radius : 2px 2px 0px 0px
+				height : 15 * $base-line-height
+				background-color : #aaaaaa
+				overflow: hidden
+body
+	font-family : Bitter
+	background-color : #ffffff
+	color : #1D1324 //#392547 //#222222
+	
+#header
+	background-color : rgb(20, 14, 20) //#222222 //#241C2C //#222222
+	
+	//background: #191919 /* Old browsers */
+	//background: -moz-linear-gradient(top,  #191919 0%, #131313 100%) /* FF3.6+ */
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191919), color-stop(100%,#131313)) /* Chrome,Safari4+ */
+	//background: -webkit-linear-gradient(top,  #191919 0%,#131313 100%) /* Chrome10+,Safari5.1+ */
+	//background: -o-linear-gradient(top,  #191919 0%,#131313 100%) /* Opera 11.10+ */
+	//background: -ms-linear-gradient(top,  #191919 0%,#131313 100%) /* IE10+ */
+	//background: linear-gradient(to bottom,  #191919 0%,#131313 100%) /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#131313',GradientType=0 ) /* IE6-9 */
+	
+	.container-fluid
+		//@extend .grid
+		+container
+		max-width : $max-width
+		min-width : $min-width
+		width : 85%
+		.row-fluid
+			+padding-leader(2)
+			.span3
+				//+leader(1)
+				+trailer(1)
+				#logo_frame
+					+padding-leader(1)
+					+span-columns(8,9)
+					height : $base-line-height * 2
+					margin : 0px
+					+trailer(1)
+					img
+						margin-top : -2px
+						width : 268px
+#nav
+	background-color : rgb(20, 14, 20)
+	box-sizing: border-box
+	width: 100%
+	overflow: auto
+	.container-fluid
+		+container
+		max-width : $max-width
+		min-width : $min-width
+		width : 85%
+		.row-fluid
+			nav
+				//display : none
+				//+leader(1)
+				//margin-left : -40px
+				.nav-bar
+					.nav-tabs
+						border : none
+						li
+							margin : 0px
+							+span-columns(4,30)
+							width : 141px
+							text-align : center
+							a
+								color : #ffffff //#fafafa
+								border-radius : 2px 2px 0px 0px
+								border-color : #333333
+								border-width : 2px 0px 0px 0px
+								border-style : solid
+								//border-color : rgb(20, 14, 20)
+								//+leader(2/3)
+								margin-top : 0.7em //0.75em
+								padding-top : 0.75em //0.75em //0.3em
+								padding-bottom : 0.75em //0.3em
+								cursor : pointer
+								line-height : $base-line-height
+								background-color : #222222 //#8569A3 //#564068 //#8F66AD //#735788 //#9b66c2 //#8152A3 //#705385 //#362C3D //#4A6566 //#2E7C7C//#3d3d3d //#2E7C7C //#3d3d3d //#2a2a2a
+								//border : none
+								-webkit-transition-property: background
+								-webkit-transition-duration: 0.1s
+								-webkit-transition-timing-function: ease
+								-moz-transition-property: background
+								-moz-transition-duration: 0.1s
+								-moz-transition-timing-function: ease
+								transition-property: background
+								transition-duration: 0.1s
+								transition-timing-function: ease
+								&:hover
+									border-width : 1px 1px 0px 1px
+									border-style : solid
+									border-color : rgb(20, 14, 20)
+									color : #ffffff
+									text-shadow : none
+									background-color : #7D53D6 //#614580 //#6F5585 //#864896
+						li.active
+							a
+								//border : none
+								border-radius : 2px 2px 0px 0px
+								text-shadow : none
+								background-color : #ffffff //#614580 //rgb(91, 61, 92)
+								color : #222222
+								border-width : 2px 0px 0px 0px
+								border-style : solid
+								border-color : rgb(20, 14, 20)
+#footer
+	height : 5 * $base-line-height
+	background-color : #eeeeee //rgb(91, 61, 92) //#8152A3 //#2A1F33
+	display : none
+	nav
+		+span-columns(24,30)
+		+pre(3,30)
+		ul
+			li
+				display : inline-block
+				margin-right : 10px
+				a
+					text-decoration : underline
+					cursor : pointer
+					color : #222222
+					&:hover
+						color : #666666
+						
+@media screen and (max-width : 860px)
+
+	#content
+		.container-fluid
+			#home_container	
+				.row-fluid			
+					#main_image_container
+						+span-columns(30,30)
+						margin-left : 0px
+						img
+							margin-bottom : 0px
+								
+@media screen and (max-width : 670px)
+	#header, #nav, #content
+		.container-fluid
+			margin-left : 20px
+			margin-right : 20px
+
+@media screen and (max-width : 725px)			
+	#content
+		.container-fluid
+			#contact_container
+				.form-row
+					.span10
+						#submit_contact_us_container
+							#submit_contact_us_button
+								button
+									margin-left : 386px
+
+@media screen and (max-width : 640px)
+	#content
+		.container-fluid
+			#contact_container
+				.form-row
+					.span10
+						.control-group
+							.row-fluid
+								.right-frame
+									width : 495px
+									#message_subject_container, #message_body_container
+										input, textarea
+											//+span-columns(14,15)
+											width : 480px
+						#submit_contact_us_container
+							#submit_contact_us_button
+								button
+									margin-left : 338px
+									
+@media screen and (max-width : 1108px)
+	#content
+		.container-fluid
+			#find_us_container
+				.row-fluid
+					.span2
+						+span-columns(10,30)
+						+post(1,30)
+					.span8
+						+span-columns(19,30)
+
+@media screen and (max-width : 900px)
+	#content
+		.container-fluid
+			#find_us_container
+				.row-fluid
+					.span2
+						+span-columns(30,30)
+					.span8
+						+span-columns(30,30)
