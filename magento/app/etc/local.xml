@@ -42,8 +42,8 @@
         <connection>
           <host><![CDATA[localhost]]></host>
           <username>root</username>
-          <password>password</password>
-          <dbname>magento</dbname>
+          <password></password>
+          <dbname>mbox_magento</dbname>
           <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
           <model><![CDATA[mysql4]]></model>
           <type><![CDATA[pdo_mysql]]></type>

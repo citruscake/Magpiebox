@@ -37,26 +37,33 @@
     <ul class="nav navbar-nav">
         <?php /*echo $_menu;*/ ?>
 		<?php
+			$cmsPageUrlKey = Mage::getSingleton('cms/page')->getIdentifier();
 			$pages = array(
-				array('link' => "/magento/index.php/home",
+				array('link' => "home",
 				'label' => "Home"),
-				array('link' => "/magento/index.php/store",
+				array('link' => "store",
 				'label' => "Shop online"),
-				array('link' => "#",
-				'label' => "Our shop"),
-				array('link' => "/magento/find_us",
+				array('link' => "find_us",
 				'label' => "Find us"),
-				array('link' => "#",
+				array('link' => "contact_us",
 				'label' => "Contact us")
 			);
 		
 			foreach($pages as $i=>$page) {
 				//echo "<li class=\"level0 nav-".$i." first level-top parent\">";
 				echo "<li>";
-				echo "<a href=\"".$page['link']."\" class=\"level-top\">".$page['label']."</a>";
+				if($cmsPageUrlKey!=$page['link']) {
+					echo "<a href=\"/magento/index.php/".$page['link']."\" class=\"level-top\">".$page['label']."</a>";
+				}
+				else {
+					echo "<a href=\"/magento/index.php/".$page['link']."\" class=\"level-top active\">".$page['label']."</a>";
+				}
 				echo "</li>";
 			}
 		?>
+		<li id="last_nav_child">
+			<?php echo $this->getLayout()->getBlock('top.search')->toHtml() ?>
+		</li>
     </ul>
 </nav>
 <?php endif ?>

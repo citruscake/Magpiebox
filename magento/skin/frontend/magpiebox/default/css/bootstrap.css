@@ -1640,8 +1640,6 @@ legend {
 
 label {
   display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
 }
 
 input[type="search"] {
@@ -1706,7 +1704,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 28px;
   padding-left: 10px;
   font-size: 14px;
   line-height: 1.428571429;
@@ -1740,7 +1738,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 15px;
+	padding-top:18px;
 }
 
 .radio,
@@ -1986,7 +1984,7 @@ textarea.input-lg {
 
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 3px 14px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2078,7 +2076,7 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #42AFCA; /*#428bca;*/
+  background-color: #7D63DF; /*#428bca;*/
   border-color: none;
 }
 
@@ -2088,7 +2086,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #4AC4E2;
+  background-color: #9E8EDA;
   border-color: none;
 }
 
@@ -3911,7 +3909,24 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-pills > li > a {
-  border-radius: 1px;
+  border-radius: 3px;
+  border-color:#eeeeee;
+  border-width:1px;
+  border-style:solid;
+  -webkit-transition-property: background;
+	-webkit-transition-duration: 0.1s;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-property: background;
+	-moz-transition-duration: 0.1s;
+	-moz-transition-timing-function: ease;
+	transition-property: background;
+	transition-duration: 0.1s;
+	transition-timing-function: ease;
+}
+
+.nav-pills > li > a:hover {
+	background-color:#7D63DF;
+	color:#ffffff;
 }
 
 .nav-pills > li + li {
@@ -3922,7 +3937,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color:#9A8CCF;
+  background-color:#7D63DF;
 }
 
 .nav-stacked > li {
@@ -4016,7 +4031,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   z-index: 1000;
   min-height: 50px;
-  border: 1px solid transparent;
 }
 
 .navbar:before,
@@ -4616,10 +4630,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .breadcrumb {
-  padding: 10px 30px 10px 0px;
   margin-bottom: 20px;
   margin-top : 30px;
   list-style: none;
+  margin-left: 15px;
   border-radius: 4px;
 }
 
@@ -4628,7 +4642,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .breadcrumb > li > strong {
-	color : #777777;
+	color : #222222;
 	font-weight : normal;
 }
 
@@ -4666,6 +4680,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
   background-color: #ffffff;
   border: 1px solid #dddddd;
+  color : #000000;
+}
+
+.pagination > .current > a {
+	background-color : #eeeeee;
+	color : #000000;
+	pointer-events: none;
+	cursor: default;
 }
 
 .pagination > li:first-child > a,
@@ -4685,7 +4707,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  background-color: #eeeeee;
+  background-color: #7D63DF;
+  color : #ffffff;
 }
 
 .pagination > .active > a,
@@ -4747,9 +4770,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-bottom-right-radius: 3px;
 }
 
-.pager {
+/*.pager {
   padding-left: 0;
-  margin: 20px 0;
   text-align: center;
   list-style: none;
 }
@@ -4810,7 +4832,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #999999;
   cursor: not-allowed;
   background-color: #ffffff;
-}
+}*/
 
 .label {
   display: inline;
